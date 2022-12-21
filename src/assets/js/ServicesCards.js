@@ -11,6 +11,6 @@ gsap.to('.services__item:not(:last-child)', {
     markers: true,
     scrub: true,
     start: 'top top',
-    end: `+=2000px`,
+    end: `+=1300px`,
   },
 });
