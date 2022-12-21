@@ -1,0 +1,16 @@
+header.header.container
+  .header__logo.logo 
+    a.logo__link(href="") 
+      img.logo__src(src=require('@/images/logo.svg'), alt="")
+  nav.header__nav.nav
+    ul.nav-list 
+      each val in menu 
+        li.nav__item(class=val.hasSub ? 'nav__item--has-children' : '')
+          a.nav__link(href=val.link)=val.name
+        if val.hasSub 
+          ul.nav__sub.sub-menu
+            each val in [1,2,3,4]
+              li.sub-menu__item 
+                a.sub-menu__link(href="")  Sub menu item
+  button.header__btn.btn.btn--filled(type="button")
+    span.btn__inner FREIGHT INQUIRE

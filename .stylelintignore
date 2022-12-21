@@ -1,0 +1,9 @@
+*.tsx
+*.jsx
+*.ts
+*.js
+*.md
+*.svg
+normalize.scss
+reset.scss
+/node_modules

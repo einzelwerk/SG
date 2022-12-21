@@ -1,0 +1,12 @@
+{
+  "extends": ["stylelint-config-standard-scss", "stylelint-config-clean-order", "stylelint-config-prettier"],
+  "plugins": ["stylelint-order"],
+  "ignore": ["no-descending-specificity", "no-global-function-names"],
+  "rules": {
+    "no-duplicate-selectors": null,
+    "no-empty-source": null,
+    "scss/no-global-function-names": null,
+    "function-url-quotes": null,
+    "declaration-block-no-duplicate-properties": null
+  }
+}

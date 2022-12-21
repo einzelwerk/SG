@@ -1,0 +1,13 @@
+@keyframes blink-color {
+  0% {
+    background: var(--main-white);
+  }
+
+  50% {
+    background: var(--accent-blue);
+  }
+
+  100% {
+    background: var(--main-white);
+  }
+}

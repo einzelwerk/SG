@@ -1,0 +1,44 @@
+@use '../utils/mixins' as *;
+
+.btn {
+  cursor: pointer;
+
+  display: block;
+
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  border: 1px solid var(--main-white);
+  border-radius: 100px;
+
+  &__inner {
+    display: block;
+    padding: 12px 20px;
+
+    &--mark {
+      display: flex;
+      align-items: center;
+
+      &::before {
+        content: '';
+
+        display: block;
+
+        width: 8px;
+        height: 8px;
+        margin-right: 8px;
+
+        background: var(--main-white);
+        border-radius: 50%;
+
+        animation: blink-color 2s infinite;
+      }
+    }
+  }
+
+  &--filled {
+    color: var(--headline);
+    background: var(--main-white);
+  }
+}
