@@ -1,0 +1,26 @@
+.page-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  min-height: 500px;
+  padding: var(--gap-block);
+
+  background: var(--ebony-clay);
+  border-radius: 24px;
+
+  &__title {
+    font-size: 48px;
+    letter-spacing: -0.02em;
+  }
+
+  &__desc-group {
+    display: flex;
+  }
+
+  &__desc {
+    max-width: 520px;
+    margin-right: 10%;
+    line-height: 150%;
+  }
+}

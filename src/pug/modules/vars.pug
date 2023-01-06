@@ -3,11 +3,20 @@
     {
       name:'Business Areas',
       link: '',
-      hasSub:true,
+      hasSub: [
+        {
+          name:'Deep Sea Servces',
+          link:`${htmlWebpackPlugin.options.path}/deep-sea.html`
+        },
+        {
+          name:'Ferry Services',
+          link:`${htmlWebpackPlugin.options.path}/ferry-services.html`
+        },
+      ],
     },
     {
       name:'Trade Areas',
-      link: '',
+      link:`${htmlWebpackPlugin.options.path}/trade-areas.html`,
       hasSub:false,
     },
     {

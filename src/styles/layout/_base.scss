@@ -45,9 +45,22 @@ body {
   }
 }
 
+.is-hidden {
+  display: none;
+}
+
 img {
   max-width: 100%;
   height: auto;
+  max-height: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  cursor: pointer;
 }
 
 .container {
@@ -61,4 +74,10 @@ img {
 .section {
   padding-top: var(--gap-y);
   padding-bottom: var(--gap-y);
+
+  &--no-bottom {
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
 }

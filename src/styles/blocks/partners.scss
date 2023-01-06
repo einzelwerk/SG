@@ -1,0 +1,21 @@
+.partners-wrapper {
+  overflow: visible;
+}
+
+.partners {
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 240px;
+
+    background: var(--ebony-clay);
+    background-blend-mode: color;
+    border-radius: 24px;
+  }
+
+  &__logo {
+    mix-blend-mode: luminosity;
+  }
+}

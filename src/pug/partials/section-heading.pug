@@ -1,2 +1,13 @@
-.section-heading 
-  h2.section-heading__title= sectionTitle
+if sectionTitle
+  .section-heading
+    h2.section-heading__title= sectionTitle
+    .section-heading__buttons-group.hidden-mobile
+      if sectionButtons
+        if pdfButton 
+          a.btn.btn--empty.btn--blue(href="#" download) 
+            span.btn__inner DOWNLOAD SCHEDULES
+        else 
+          button.btn.btn--empty
+            span.btn__inner Get a Quote
+          a.btn.btn--empty.btn--blue(href="#") 
+            span.btn__inner SCHEDULES

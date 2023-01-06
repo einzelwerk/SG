@@ -1,0 +1,28 @@
+extends ../layouts/main
+
+block content
+  - locals.imageSrc = require('@/images/hero/ferry.jpg')
+  - locals.heroTitle = 'Ferry Services'
+  - locals.heroDesc = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+  include ../blocks/hero
+  include ../blocks/page-info
+  - locals.sectionTitle = 'Our advantages'
+  include ../blocks/features
+  - locals.sectionTitle = 'Our company delivers different types of cargo'
+  include ../blocks/types
+  - locals.sectionTitle = 'Where we ship'
+  - locals.sectionButtons = true;
+  section.section.container
+    include ../partials/section-heading
+    .map-container
+      .map
+        picture.map__image
+          img(src=require('@/images/maps/1.svg'), alt="")
+  - locals.sectionTitle = 'Our partners'
+  - locals.sectionButtons = false;
+  include ../blocks/partners
+  include ../blocks/cta
+  - locals.sectionTitle = 'Frequently Asked Questions'
+  include ../blocks/faq
+  - locals.sectionTitle = 'Stena Glovis can supply tailored solutions for our customers business.'
+  include ../blocks/services

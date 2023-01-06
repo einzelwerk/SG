@@ -1,0 +1,40 @@
+.marquee-wrapper {
+  padding: calc(var(--gap-y) * 2);
+  background: var(--ebony-clay);
+}
+
+.marquee-title {
+  margin-bottom: 64px;
+
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: -0.01em;
+
+  opacity: 0.5;
+}
+
+.marquee {
+  &__line {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  &__item {
+    margin-right: 30px;
+
+    font-size: 32px;
+    font-size: 1.667vw;
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+  }
+}

@@ -2,6 +2,12 @@
   width: 160px;
   height: 32px;
 
+  &--big {
+    width: auto;
+    max-width: 480px;
+    height: auto;
+  }
+
   &__src {
     display: block;
     width: 100%;

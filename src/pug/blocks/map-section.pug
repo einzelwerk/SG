@@ -1,0 +1,44 @@
+section.section.container
+  include ../partials/section-heading
+  .map-wrapper
+    if !removeMapCategory
+      .category-tabs(role='tablist')
+        button.category-tabs__btn(type='button' role='tab' aria-selected='true' aria-controls='maps-tabs-1') Trade Maps Deep Sea Services
+        button.category-tabs__btn(type='button' role='tab' aria-selected='false' aria-controls='maps-tabs-2') Trade Maps Ferry Services
+    if removeMapCategory
+      .maps-category-wrapper(role='tablist')
+        - var arr = [1,2,3,4,5,6]
+        .maps-category
+          each val, index in arr
+            button.maps-category__btn.btn(type='button' role='tab' aria-selected=`${index === 0 ? 'true' : 'false'}` aria-controls=`map-${index}`) 
+              span.btn__inner EU - Far East
+        each val, index in arr
+          .map-container(id=`map-${index}` role='tablist')
+            .map=index
+              picture.map__image
+                img(src=require('@/images/maps/1.svg'), alt="")
+    else
+      #maps-tabs-1.maps-category-wrapper(role='tablist')
+        - var arr = [1,2,3,4,5,6]
+        .maps-category
+          each val, index in arr
+            button.maps-category__btn.btn(type='button' role='tab' aria-selected=`${index === 0 ? 'true' : 'false'}` aria-controls=`map-${index}`) 
+              span.btn__inner EU - Far East
+        each val, index in arr
+          .map-container(id=`map-${index}` role='tablist')
+            .map=index
+              picture.map__image
+                img(src=require('@/images/maps/1.svg'), alt="")
+      #maps-tabs-2.maps-category-wrapper-2(role='tablist')
+        .maps-category
+          - var arr2 = [7,8,9,10,11,12]
+            each val, index in arr2
+              button.maps-category__btn.btn(type='button' role='tab' aria-selected=`${index === 0 ? 'true' : 'false'}` aria-controls=`map-${val}`) 
+                span.btn__inner EU - Far East 2 
+        each val, index in arr2
+          .map-container(id=`map-${val}` role='tablist')
+            .map=index
+              picture.map__image
+                img(src=require('@/images/maps/1.svg'), alt="")
+
+

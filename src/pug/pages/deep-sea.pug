@@ -1,0 +1,25 @@
+extends ../layouts/main
+
+block content
+  - locals.imageSrc = require('@/images/hero/deep.jpg')
+  - locals.heroTitle = 'Deep Sea Services'
+  - locals.heroDesc = 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.'
+  include ../blocks/hero
+  include ../blocks/page-info
+  - locals.sectionTitle = 'Our advantages'
+  include ../blocks/features
+  - locals.sectionTitle = 'Our company delivers different types of cargo'
+  include ../blocks/types
+  - locals.sectionTitle = 'Where we ship'
+  - locals.sectionButtons = true;
+  include ../blocks/map-section
+  - locals.sectionTitle = 'Our partners'
+  - locals.sectionButtons = false;
+  include ../blocks/partners
+  include ../blocks/cta
+
+  - locals.sectionTitle = 'Frequently Asked Questions'
+  include ../blocks/faq
+
+  include ../blocks/marquee
+

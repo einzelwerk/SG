@@ -2,9 +2,20 @@
 extends ../layouts/main
 
 block content
+  - locals.heroTitle = 'Deep Sea Services'
+  - locals.heroDesc = 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.'
   include ../blocks/hero
   - locals.sectionTitle = ' Our Possibilities'
   include ../blocks/features
   - locals.sectionTitle = 'Stena Glovis can supply tailored solutions for our customers business.'
   include ../blocks/services
+  - locals.sectionTitle = 'Our company delivers different types of cargo'
+  include ../blocks/types
   include ../blocks/about
+  - locals.sectionTitle = 'Where we ship'
+  - locals.sectionButtons = true;
+  include ../blocks/map-section
+    - locals.sectionTitle = 'Our partners'
+    - locals.sectionButtons = false;
+  include ../blocks/partners
+  include ../blocks/cta

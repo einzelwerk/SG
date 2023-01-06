@@ -4,6 +4,7 @@
   --container: 1920px;
   --gap: 30px;
   --gap-y: 80px;
+  --gap-block: 30px;
   @each $breakpoint, $val in $breakpoints {
     @include media($breakpoint) {
       --container: #{$val};
@@ -12,10 +13,12 @@
   @include media(lg) {
     --gap: 16px;
     --gap-y: 60px;
+    --gap-block: 20px;
   }
 }
 
 :root {
+  --ebony-clay: #20252f;
   --bunker: #0b0f16;
   --black-100: #041537;
   --black-200: #10141b;

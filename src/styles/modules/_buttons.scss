@@ -9,8 +9,21 @@
   font-weight: 500;
   text-transform: uppercase;
 
-  border: 1px solid var(--main-white);
+  border: 1px solid;
+  border-color: currentcolor;
   border-radius: 100px;
+
+  &--blue {
+    color: var(--accent-blue);
+  }
+
+  &--black {
+    color: var(--headline);
+  }
+
+  &--borderless {
+    border: none;
+  }
 
   &__inner {
     display: block;

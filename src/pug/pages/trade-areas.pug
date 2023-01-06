@@ -1,0 +1,21 @@
+extends ../layouts/main
+
+block content
+  - locals.imageSrc = require('@/images/hero/trade.jpg')
+  - locals.heroTitle = 'Trade Areas'
+  - locals.heroDesc = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+  include ../blocks/hero
+  - locals.sectionTitle = 'Trade Maps Deep Sea Services'
+  - locals.sectionButtons = true;
+  - locals.pdfButton = true;
+  - locals.removeMapCategory = true;
+  include ../blocks/map-section
+  - locals.sectionTitle = 'Trade Maps Ferry Services'
+  - locals.sectionButtons = true;
+  section.section.container
+    include ../partials/section-heading
+    .map-container
+      .map
+        picture.map__image
+          img(src=require('@/images/maps/1.svg'), alt="")
+  include ../blocks/cta-buttons

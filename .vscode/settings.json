@@ -16,5 +16,8 @@
   ],
   "[jade]": {
     "editor.defaultFormatter": "ducfilan.pug-formatter"
+  },
+  "[php]": {
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
   }
 }

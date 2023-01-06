@@ -8,9 +8,7 @@ gsap.to('.services__item:not(:last-child)', {
   scrollTrigger: {
     trigger: '.services',
     pin: true,
-    markers: true,
     scrub: true,
     start: 'top top',
-    end: `+=1300px`,
   },
 });

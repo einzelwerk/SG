@@ -7,6 +7,7 @@
     "no-empty-source": null,
     "scss/no-global-function-names": null,
     "function-url-quotes": null,
-    "declaration-block-no-duplicate-properties": null
+    "declaration-block-no-duplicate-properties": null,
+    "selector-class-pattern": null
   }
 }

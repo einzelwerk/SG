@@ -1,6 +1,8 @@
 import { gsap } from 'gsap';
 import { CustomEase } from 'gsap/CustomEase';
 
+gsap.registerPlugin(CustomEase);
+
 CustomEase.create('cubic', '0.77, 0, 0.175, 1');
 
 const baseHeroHeight = document.querySelector('.section-hero').offsetHeight;
@@ -12,8 +14,8 @@ class HeroVideoPlayback {
     this.btn = '.js-play-hero-video';
     this.state = false;
 
-    this.originalText = document.querySelector(`${this.btn} span`).innerText;
-    this.modyfText = document.querySelector(this.btn).dataset.switchText;
+    this.originalText = document.querySelector(`${this.btn} span`)?.innerText;
+    this.modyfText = document.querySelector(this.btn)?.dataset.switchText;
   }
 
   getTargetBtnWidth() {
@@ -91,7 +93,7 @@ class HeroVideoPlayback {
   }
 
   listener() {
-    document.querySelector(this.btn).addEventListener('click', () => {
+    document.querySelector(this.btn)?.addEventListener('click', () => {
       this.animation(this.state);
       this.state = !this.state;
     });

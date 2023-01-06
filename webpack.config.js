@@ -52,6 +52,7 @@ module.exports = {
         template: path.resolve(__dirname, pagesDir, file),
         filename: `${path.parse(file).name}.html`,
         minify: false,
+        path: isProd ? '/SG' : '',
       });
     }),
     new ESLintPlugin(),
