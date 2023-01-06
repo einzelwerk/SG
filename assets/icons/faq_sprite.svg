@@ -1,0 +1,8 @@
+export default {
+      id: "faq_sprite-usage",
+      viewBox: "0 0 22 22",
+      url: __webpack_public_path__ + "C:\\Users\\user\\Desktop\\work\\sg\\src\\assets\\icons\\faq_sprite.svg",
+      toString: function () {
+        return this.url;
+      }
+    }
