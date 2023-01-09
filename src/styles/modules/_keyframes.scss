@@ -1,6 +1,6 @@
 @keyframes blink-color {
   0% {
-    background: var(--main-white);
+    background: currentcolor;
   }
 
   50% {
@@ -8,7 +8,7 @@
   }
 
   100% {
-    background: var(--main-white);
+    background: currentcolor;
   }
 }
 

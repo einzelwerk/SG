@@ -18,6 +18,7 @@
 @use 'layout/header';
 @use 'layout/footer';
 @use 'layout/section-heading';
+@use 'layout/page-title';
 
 // pages
 
@@ -34,4 +35,22 @@
 @use 'blocks/cta';
 @use 'blocks/page-info';
 @use 'blocks/faq';
-@use 'blocks/marquee';
+@use 'blocks/block-links';
+@use 'blocks/types-full';
+@use 'blocks/video';
+@use 'blocks/block-address';
+@use 'blocks/our-people';
+@use 'blocks/jobs';
+@use 'blocks/more-link';
+@use 'blocks/no-jobs';
+@use 'blocks/our-mission';
+@use 'blocks/career-features';
+@use 'blocks/departments';
+@use 'blocks/cta-work';
+@use 'blocks/breadcrumbs';
+@use 'blocks/job-conditional';
+@use 'blocks/job-page';
+@use 'blocks/job-description';
+@use 'blocks/job-cta';
+@use 'blocks/main-form';
+@use 'blocks/schedules';

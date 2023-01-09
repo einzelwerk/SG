@@ -75,9 +75,31 @@ a {
   padding-top: var(--gap-y);
   padding-bottom: var(--gap-y);
 
+  &:last-child {
+    margin-bottom: var(--gap-y);
+  }
+
+  &--breadcrumbs {
+    padding-top: 60px;
+    padding-bottom: 100px;
+  }
+
+  &--no-top {
+    padding-top: 0;
+  }
+
   &--no-bottom {
     &:last-child {
       padding-bottom: 0;
     }
+  }
+}
+
+.main {
+  overflow-x: hidden;
+
+  &--offset-top {
+    margin-top: var(--header-height);
+    padding-top: 40px;
   }
 }

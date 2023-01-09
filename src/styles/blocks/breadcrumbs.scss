@@ -1,0 +1,38 @@
+.breadcrumbs {
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-right: 12px;
+
+    &::after {
+      content: '';
+
+      width: 4px;
+      height: 4px;
+      margin-left: 12px;
+
+      opacity: 0.2;
+      background: var(--main-white);
+    }
+
+    &:last-child {
+      &::after {
+        content: none;
+      }
+    }
+  }
+
+  &__link {
+    letter-spacing: -0.005em;
+    opacity: 0.5;
+
+    &--current {
+      opacity: 1;
+    }
+  }
+}

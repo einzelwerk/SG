@@ -1,0 +1,21 @@
+extends ../layouts/main
+
+block content
+  - locals.imageSrc = require('@/images/hero/about.jpg')
+  - locals.heroTitle = 'Stena Glovis'
+  - locals.heroDesc = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+  - locals.download = true;
+  include ../blocks/hero
+  include ../blocks/video
+  include ../blocks/block-address
+  include ../blocks/our-mission
+  - locals.aboutImage = require('@/images/about-2.jpg')
+  - locals.aboutTitle = 'Management'
+  - locals.aboutDesc = ['Stena Glovis primary purpose is to market and sell the Deep-Sea RoRo Services of Hyundai Glovis and the European Ferry Services of Stena Line.' , 'Stena Glovis primary purpose is to market and sell the Deep-Sea RoRo Services of Hyundai Glovis and the European Ferry Services of Stena Line']
+  include ../blocks/about
+  - locals.sectionTitle = 'Our people'
+  include ../blocks/our-people
+  - locals.sectionTitle = 'Open Jobs'
+  include ../blocks/jobs
+  include ../blocks/no-jobs
+  include ../blocks/cta

@@ -1,0 +1,14 @@
+extends ../layouts/main
+
+block content
+  - locals.imageSrc = require('@/images/hero/career.jpg')
+  - locals.heroTitle = 'Career'
+  - locals.heroDesc = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+  include ../blocks/hero
+  - locals.sectionTitle = 'Benefits for employees'
+  include ../blocks/career-features
+  include ../blocks/jobs
+  include ../blocks/no-jobs
+  - locals.sectionTitle = 'Departments'
+  include ../blocks/departments
+  include ../blocks/cta-work

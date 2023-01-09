@@ -1,0 +1,45 @@
+.schedules {
+  &__title {
+    margin-bottom: 64px;
+    font-size: 48px;
+    letter-spacing: -0.02em;
+  }
+
+  &__block {
+    margin-bottom: 100px;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+
+.schedules-list {
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+    padding: var(--gap);
+
+    background: var(--ebony-clay);
+    border-radius: 24px;
+
+    transition: 0.5s;
+
+    &:hover {
+      background: #2a303c;
+    }
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    line-height: 133%;
+    letter-spacing: -0.01em;
+  }
+}

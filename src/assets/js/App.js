@@ -1,3 +1,4 @@
+import './Init';
 import './Nav';
 import './HeroVideo';
 import './SmoothScroll';
@@ -6,3 +7,5 @@ import './Sliders';
 import './Tabs';
 import './Faq';
 import './Marquee';
+import './Video';
+import './AttachedFiles';

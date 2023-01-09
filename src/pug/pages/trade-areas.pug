@@ -19,3 +19,8 @@ block content
         picture.map__image
           img(src=require('@/images/maps/1.svg'), alt="")
   include ../blocks/cta-buttons
+  - locals.sectionTitle = 'Frequently Asked Questions'
+    - locals.sectionButtons = false;
+  include ../blocks/faq
+  - locals.sectionTitle = 'These links could help you'
+  include ../blocks/block-links

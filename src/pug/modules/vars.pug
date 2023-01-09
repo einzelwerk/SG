@@ -12,6 +12,10 @@
           name:'Ferry Services',
           link:`${htmlWebpackPlugin.options.path}/ferry-services.html`
         },
+        {
+          name:'Cargo Types',
+          link:`${htmlWebpackPlugin.options.path}/cargo.html`
+        },
       ],
     },
     {
@@ -20,15 +24,37 @@
       hasSub:false,
     },
     {
-      name:'Cus tomer service',
+      name:'Customer service',
       link: '',
-      hasSub:true,
+      hasSub:[
+        {
+          name:'Delivery',
+          link:`${htmlWebpackPlugin.options.path}/delivery.html`,
+        },
+        {
+          name:'Schedules',
+          link:`${htmlWebpackPlugin.options.path}/schedules.html`,
+        },
+      ],
+    },
+    {
+      name:'Career',
+        link:`${htmlWebpackPlugin.options.path}/career.html`,
+
+      hasSub:false,
+    },
+    {
+      name:'Job page',
+        link:`${htmlWebpackPlugin.options.path}/job-page.html`,
+
+      hasSub:false,
     },
     {
       name:'About us',
-      link: '',
-      hasSub:true,
+        link:`${htmlWebpackPlugin.options.path}/about.html`,
+      hasSub:false,
     },
+
     {
       name:'Contact',
       link: '',

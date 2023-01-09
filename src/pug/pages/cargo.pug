@@ -1,0 +1,14 @@
+extends ../layouts/main
+
+block content
+  - locals.imageSrc = require('@/images/hero/cargo.jpg')
+  - locals.heroTitle = 'Cargo Types'
+  - locals.heroDesc = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+  include ../blocks/hero
+  - locals.sectionTitle = 'What do we ship? We ship a lot of different categories'
+  include ../blocks/types-full
+  include ../blocks/cta-buttons
+  - locals.sectionTitle = 'Frequently Asked Questions'
+  include ../blocks/faq
+  - locals.sectionTitle = 'These links could help you'
+  include ../blocks/block-links

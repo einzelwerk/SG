@@ -1,0 +1,36 @@
+@use '../utils/mixins' as *;
+
+.job-cta {
+  display: grid;
+  grid-template-columns: minmax(min-content, 50%) 1fr;
+  gap: var(--gap);
+
+  padding: var(--gap);
+
+  color: var(--main-white);
+
+  background: var(--accent-red);
+  border-radius: 24px;
+
+  &__col {
+    flex: 1;
+
+    &--text {
+      @include media(xxl) {
+        max-width: 480px;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    font-size: 64px;
+    line-height: 112%;
+    letter-spacing: -0.03em;
+  }
+
+  &__desc {
+    line-height: 150%;
+    letter-spacing: -0.005em;
+  }
+}

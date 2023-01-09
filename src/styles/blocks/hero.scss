@@ -48,7 +48,8 @@
     position: absolute;
     z-index: 1010;
     bottom: 50px;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
 
     color: var(--main-white);
   }

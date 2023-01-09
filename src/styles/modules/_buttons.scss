@@ -32,6 +32,7 @@
     &--mark {
       display: flex;
       align-items: center;
+      color: currentcolor;
 
       &::before {
         content: '';
@@ -42,7 +43,7 @@
         height: 8px;
         margin-right: 8px;
 
-        background: var(--main-white);
+        background: currentcolor;
         border-radius: 50%;
 
         animation: blink-color 2s infinite;
@@ -53,5 +54,6 @@
   &--filled {
     color: var(--headline);
     background: var(--main-white);
+    border-color: var(--main-white);
   }
 }

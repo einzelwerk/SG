@@ -5,12 +5,12 @@ gsap.registerPlugin(CustomEase);
 
 CustomEase.create('cubic', '0.77, 0, 0.175, 1');
 
-const baseHeroHeight = document.querySelector('.section-hero').offsetHeight;
+const baseHeroHeight = document.querySelector('.section-hero')?.offsetHeight;
 
 class HeroVideoPlayback {
   constructor() {
-    this.header = document.querySelector('.header');
-    this.heroElements = document.querySelectorAll(' .hero__desc, .hero__title , .hero__btn:not(.js-play-hero-video)');
+    this.header = document?.querySelector('.header');
+    this.heroElements = document?.querySelectorAll(' .hero__desc, .hero__title , .hero__btn:not(.js-play-hero-video)');
     this.btn = '.js-play-hero-video';
     this.state = false;
 

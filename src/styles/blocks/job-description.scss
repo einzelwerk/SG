@@ -1,0 +1,72 @@
+.job-description {
+  padding-top: 100px;
+  padding-bottom: calc(var(--gap-y) * 2);
+
+  color: var(--headline);
+
+  background: var(--athens-gray);
+  border-radius: 48px 48px 0 0;
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  &__item {
+    margin-bottom: 80px;
+    line-height: 150%;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &__col {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &--desc {
+      padding-right: 130px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    font-size: 32px;
+    letter-spacing: -0.02em;
+  }
+
+  li {
+    display: flex;
+    margin-bottom: 16px;
+    letter-spacing: -0.005em;
+
+    &::before {
+      content: '';
+
+      position: relative;
+      top: 6px;
+
+      display: block;
+      flex: none;
+
+      width: 8px;
+      height: 8px;
+      margin-right: 12px;
+
+      background: var(--headline);
+      border-radius: 50%;
+    }
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  p {
+    margin-bottom: 1.5rem;
+  }
+}

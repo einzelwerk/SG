@@ -1,0 +1,54 @@
+extends ../layouts/main--no-hero
+
+block content
+  - locals.breadcrumbs = ['Home' , 'About us' , 'Schedules' ]
+  include ../blocks/breadcrumbs
+  section.section.section--breadcrumbs.container 
+    h1.page-title Schedules
+  section.container.section.section--no-top
+    .schedules 
+      .schedules__block 
+        h2.schedules__title Stena
+        ul.schedules-list
+          li.schedules-list__item
+            h3.schedules-list__title Stena Ferry Services
+            a.schedules-list__btn.btn.btn--primary(href="#" download)
+              span.btn__inner  download 
+      .schedules__block 
+        h2.schedules__title Hyundai Glovis
+        ul.schedules-list
+          li.schedules-list__item
+            h3.schedules-list__title Stena Ferry Services
+            a.schedules-list__btn.btn.btn--primary(href="#" download)
+              span.btn__inner  download 
+          li.schedules-list__item
+            h3.schedules-list__title Stena Ferry Services
+            a.schedules-list__btn.btn.btn--primary(href="#" download)
+              span.btn__inner  download 
+          li.schedules-list__item
+            h3.schedules-list__title Stena Ferry Services
+            a.schedules-list__btn.btn.btn--primary(href="#" download)
+              span.btn__inner  download 
+          li.schedules-list__item
+            h3.schedules-list__title Stena Ferry Services
+            a.schedules-list__btn.btn.btn--primary(href="#" download)
+              span.btn__inner  download 
+          li.schedules-list__item
+            h3.schedules-list__title Stena Ferry Services
+            a.schedules-list__btn.btn.btn--primary(href="#" download)
+              span.btn__inner  download 
+          li.schedules-list__item
+            h3.schedules-list__title Stena Ferry Services
+            a.schedules-list__btn.btn.btn--primary(href="#" download)
+              span.btn__inner  download 
+          li.schedules-list__item
+            h3.schedules-list__title Stena Ferry Services
+            a.schedules-list__btn.btn.btn--primary(href="#" download)
+              span.btn__inner  download 
+          li.schedules-list__item
+            h3.schedules-list__title Stena Ferry Services
+            a.schedules-list__btn.btn.btn--primary(href="#" download)
+              span.btn__inner  download 
+  include ../blocks/cta-buttons
+  include ../blocks/faq
+  include ../blocks/block-links

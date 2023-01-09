@@ -1,0 +1,32 @@
+-
+  var features = [
+    {
+      title: 'Attraktives, faires Gehalt'
+    },
+    {
+      title: 'Flexible Arbeitszeiten'
+    },
+    {
+      title: 'Mobiles Arbeiten an 2 Wochentagen möglich'
+    },
+    {
+      title: 'HVV ProfiCard'
+    },
+    {
+      title: 'Bike Leasing'
+    },
+    {
+      title: 'Zuschuss zuFitness Aktivitäten'
+    },
+  ]
+
+
+section.section.container
+  include ../partials/section-heading
+  .career-features.swiper 
+    .career-features__grid.swiper-wrapper
+      each val, index in features
+        .career-features__item.swiper-slide
+          .career-features__icon 
+            img(src=require(`@/images/career-features/${index + 1}.svg`) alt="")
+          h3.career-features__title= val.title

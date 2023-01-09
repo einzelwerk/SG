@@ -1,0 +1,26 @@
+.no-jobs {
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+
+  padding: var(--gap) var(--gap) 78px;
+
+  background: var(--ebony-clay);
+  border-radius: 24px;
+
+  &__text {
+    max-width: 500px;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    font-size: 64px;
+    line-height: 112%;
+    letter-spacing: -0.03em;
+  }
+
+  &__desc {
+    line-height: 150%;
+    letter-spacing: -0.005em;
+  }
+}

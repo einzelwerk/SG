@@ -11,6 +11,10 @@ block content
   include ../blocks/services
   - locals.sectionTitle = 'Our company delivers different types of cargo'
   include ../blocks/types
+  - locals.aboutImage = require('@/images/about.jpg')
+  - locals.aboutTitle = 'Joint venture'
+  - locals.aboutDesc = ['Two of the largest shipping and logistics groups in the world, Hyundai Glovis and Stena, have joined forces with the ambition to become Europe’s leading finished vehicle logistics provider across Deep Sea and Ferry Services.' , 'With a combined PCTC/RoRo fleet trading in European and International waters Stena Glovis will deliver a best in class finished vehicle logistics operation and a unique value proposition to our customers.']
+  - locals.aboutButton = true;
   include ../blocks/about
   - locals.sectionTitle = 'Where we ship'
   - locals.sectionButtons = true;

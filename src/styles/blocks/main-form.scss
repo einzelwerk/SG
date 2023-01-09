@@ -1,0 +1,176 @@
+.main-form {
+  &__item {
+    margin-bottom: 40px;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    &--clip-file {
+      cursor: pointer;
+      position: relative;
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgb(255 255 255 / 40%);
+    }
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    padding-bottom: 20px;
+
+    opacity: 0.5;
+    border-bottom: 1px solid rgb(255 255 255 / 40%);
+
+    transition: 0.5s;
+
+    &::placeholder {
+      font-size: 16px;
+    }
+
+    &:focus {
+      opacity: 1;
+      border-color: #fff;
+    }
+
+    &:focus-visible {
+      outline: none;
+    }
+  }
+
+  &__clip-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  &__file {
+    position: absolute;
+
+    overflow: hidden;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+
+    white-space: nowrap;
+
+    clip: rect(0 0 0 0);
+    clip-path: inset(100%);
+    border: 0;
+  }
+
+  &__file-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__file-placeholder-text {
+    &.has-files {
+      display: none;
+    }
+  }
+
+  &__checkbox-label {
+    display: flex;
+    align-items: center;
+  }
+
+  &__checkbox {
+    margin-top: 32px;
+  }
+
+  &__submit {
+    margin-top: 32px;
+  }
+}
+
+.attached-files {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  max-width: 90%;
+
+  &__item {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 4px 8px;
+
+    font-size: 14px;
+    color: var(--headline);
+
+    background: var(--main-white);
+    border-radius: 8px;
+  }
+
+  &__item-delete {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 16px;
+    height: 16px;
+    margin-left: 4px;
+  }
+}
+
+.checkbox {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+
+  &__fake {
+    display: block;
+
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+
+    opacity: 0.4;
+    border: 1px solid #fff;
+    border-radius: 4px;
+  }
+
+  &__input {
+    position: absolute;
+
+    overflow: hidden;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+
+    white-space: nowrap;
+
+    clip: rect(0 0 0 0);
+    clip-path: inset(100%);
+    border: 0;
+
+    &:checked ~ .checkbox__fake {
+      padding: 6px;
+
+      opacity: 1;
+      background: url(../assets/images/checked.svg);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 9px 6px;
+    }
+
+    &:focus-visible ~ .checkbox__fake {
+      outline: 1px solid green;
+    }
+  }
+
+  &__link {
+    display: block;
+    margin-left: 0.3rem;
+    text-decoration: underline;
+  }
+}
