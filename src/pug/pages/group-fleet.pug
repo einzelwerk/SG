@@ -1,0 +1,38 @@
+extends ../layouts/main--no-hero
+
+block content
+  - locals.breadcrumbs = ['Home' , 'About us' , 'Group fleet' ]
+  include ../blocks/breadcrumbs
+  section.section.section--breadcrumbs.container 
+    h1.page-title Group fleet
+    p.page-desc Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+  section.section.section--no-top.container
+    .fleet-tabs 
+      .category-tabs(role='tablist')
+        button.category-tabs__btn(type='button' role='tab' aria-selected='true' aria-controls='fleet-tab-1') PCTC Fleet List
+        button.category-tabs__btn(type='button' role='tab' aria-selected='false' aria-controls='fleet-tab-2') Ferry/RoRo Fleet List
+      #fleet-tab-1.fleet-tabs__content(role='tablist')
+        .fleet-list
+          each val,index in [1,2,3,4,5,6,7,8,9,1,1,1,1,1,1,1]
+            .fleet-list__item
+              h2.fleet-list__title GLOVIS Captain	
+              .fleet-list__value
+                | 6.741
+                span RT
+        .more-link-wrapper
+          button.btn.btn--primary.more-link(href="")
+            span.btn__inner load more 
+      #fleet-tab-2.fleet-tabs__content(role='tablist')
+        .fleet-list
+          each val,index in [1,2,3,4,5,6,7,8,9,1,1,1,1,1,1,1]
+            .fleet-list__item
+              h2.fleet-list__title GLOVIS Captain 2	
+              .fleet-list__value
+                | 6.741
+                span RT
+        .more-link-wrapper
+          button.btn.btn--primary.more-link(href="")
+            span.btn__inner load more
+  include ../blocks/cta
+  - locals.sectionTitle = 'This links could help you'
+  include ../blocks/block-links

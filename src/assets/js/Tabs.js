@@ -1,19 +1,19 @@
-/* eslint-disable */
+/* eslint-disable no-new */
+
 class TabsAutomatic {
   constructor(groupNode) {
     this.tablistNode = groupNode;
-
-    this.tabs = [];
-
-    this.firstTab = null;
-    this.lastTab = null;
-
     this.tabs = Array.from(this.tablistNode.querySelectorAll('[role=tab]'));
+
     this.tabpanels = [];
 
-    for (var i = 0; i < this.tabs.length; i += 1) {
-      var tab = this.tabs[i];
-      var tabpanel = document.getElementById(tab.getAttribute('aria-controls'));
+    this.firstTab = null;
+
+    this.lastTab = null;
+
+    this.tabs.forEach((el) => {
+      const tab = el;
+      const tabpanel = document.getElementById(tab.getAttribute('aria-controls'));
 
       tab.tabIndex = -1;
       tab.setAttribute('aria-selected', 'false');
@@ -26,59 +26,50 @@ class TabsAutomatic {
         this.firstTab = tab;
       }
       this.lastTab = tab;
-    }
+    });
 
     this.setSelectedTab(this.firstTab, false);
   }
 
-  setSelectedTab(currentTab, setFocus) {
-    if (typeof setFocus !== 'boolean') {
-      setFocus = true;
-    }
-    for (var i = 0; i < this.tabs.length; i += 1) {
-      var tab = this.tabs[i];
+  setSelectedTab(currentTab, setFocus = true) {
+    this.tabs.forEach((el) => {
+      const tab = el;
       if (currentTab === tab) {
         tab.setAttribute('aria-selected', 'true');
         tab.removeAttribute('tabindex');
-        this.tabpanels[i].classList.remove('is-hidden');
+        this.tabpanels[this.tabs.indexOf(tab)].classList.remove('is-hidden');
         if (setFocus) {
           tab.focus();
         }
       } else {
         tab.setAttribute('aria-selected', 'false');
         tab.tabIndex = -1;
-        this.tabpanels[i].classList.add('is-hidden');
+        this.tabpanels[this.tabs.indexOf(tab)].classList.add('is-hidden');
       }
-    }
+    });
   }
 
   setSelectedToPreviousTab(currentTab) {
-    var index;
-
     if (currentTab === this.firstTab) {
       this.setSelectedTab(this.lastTab);
     } else {
-      index = this.tabs.indexOf(currentTab);
-      this.setSelectedTab(this.tabs[index - 1]);
+      this.setSelectedTab(this.tabs[this.tabs.indexOf(currentTab) - 1]);
     }
   }
 
   setSelectedToNextTab(currentTab) {
-    var index;
-
     if (currentTab === this.lastTab) {
       this.setSelectedTab(this.firstTab);
     } else {
-      index = this.tabs.indexOf(currentTab);
-      this.setSelectedTab(this.tabs[index + 1]);
+      this.setSelectedTab(this.tabs[this.tabs.indexOf(currentTab) + 1]);
     }
   }
 
   /* EVENT HANDLERS */
 
   onKeydown(event) {
-    var tgt = event.currentTarget,
-      flag = false;
+    const tgt = event.currentTarget;
+    let flag = false;
 
     switch (event.key) {
       case 'ArrowLeft':
@@ -118,17 +109,25 @@ class TabsAutomatic {
 
 // Initialize tablist
 
-window.addEventListener('load', function () {
-  const categoryTabs = document.querySelectorAll('[role=tablist].category-tabs');
-  for (let i = 0; i < categoryTabs.length; i++) {
+window.addEventListener('load', () => {
+  const categoryTabs = document.querySelectorAll('.map-wrapper [role=tablist].category-tabs');
+  for (let i = 0; i < categoryTabs.length; i += 1) {
     new TabsAutomatic(categoryTabs[i]);
   }
+  const fleetTabs = document.querySelectorAll('.fleet-tabs [role=tablist].category-tabs');
+  for (let i = 0; i < fleetTabs.length; i += 1) {
+    new TabsAutomatic(fleetTabs[i]);
+  }
+  const contactsTabs = document.querySelectorAll('.contacts-tabs [role=tablist].category-tabs');
+  for (let i = 0; i < contactsTabs.length; i += 1) {
+    new TabsAutomatic(contactsTabs[i]);
+  }
   const mapTabs = document.querySelectorAll('[role=tablist].maps-category-wrapper');
-  for (let i = 0; i < mapTabs.length; i++) {
+  for (let i = 0; i < mapTabs.length; i += 1) {
     new TabsAutomatic(mapTabs[i]);
   }
   const mapTabs2 = document.querySelectorAll('[role=tablist].maps-category-wrapper-2');
-  for (let i = 0; i < mapTabs2.length; i++) {
+  for (let i = 0; i < mapTabs2.length; i += 1) {
     new TabsAutomatic(mapTabs2[i]);
   }
 });

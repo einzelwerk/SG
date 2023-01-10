@@ -1,0 +1,45 @@
+.contacts-tabs {
+  &__content {
+    margin-top: 64px;
+  }
+
+  &__map {
+    margin-top: 64px;
+  }
+}
+
+.contacts-block {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+
+  &__link {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__col {
+    flex: 1;
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: -0.01em;
+
+    &--socials {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__socials {
+    margin-bottom: 16px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}

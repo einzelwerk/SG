@@ -18,7 +18,7 @@
 @use 'layout/header';
 @use 'layout/footer';
 @use 'layout/section-heading';
-@use 'layout/page-title';
+@use 'layout/page';
 
 // pages
 
@@ -54,3 +54,7 @@
 @use 'blocks/job-cta';
 @use 'blocks/main-form';
 @use 'blocks/schedules';
+@use 'blocks/delivery';
+@use 'blocks/fleet';
+@use 'blocks/contacts';
+@use 'blocks/contacts-map';

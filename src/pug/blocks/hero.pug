@@ -9,11 +9,11 @@ section.section-hero
       h1.hero__title= heroTitle
       p.hero__desc= heroDesc
       .hero__buttons
-        button.hero__btn.btn(type="button")
+        button.hero__btn.btn.btn--primary(type="button")
           span.btn__inner.btn__inner--mark EXPLORE BELOW
         if download 
           a.hero__btn.btn.btn--blue(href="#" download)
             span.btn__inner DOWNLOAD PRESENTATION
         if !imageSrc
-          button.hero__btn.btn.js-play-hero-video(type="button" data-switch-text="BACK TO SITE")
+          button.hero__btn.btn.btn--primary.js-play-hero-video(type="button" data-switch-text="BACK TO SITE")
             span.btn__inner WATCH FULL VIDEO

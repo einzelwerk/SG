@@ -1,0 +1,46 @@
+.delivery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 100px 30px;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__city {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+
+    &::before {
+      content: '';
+
+      width: 5px;
+      height: 5px;
+      margin-right: 8px;
+
+      background: var(--main-white);
+      border-radius: 50%;
+    }
+  }
+
+  &__address {
+    max-width: 300px;
+    margin-bottom: 8px;
+    line-height: 150%;
+    letter-spacing: -0.005em;
+  }
+
+  &__link {
+    margin-bottom: 8px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,62 @@
+extends ../layouts/main--no-hero
+
+block content
+  - locals.breadcrumbs = ['Home' , 'Contact' ]
+  include ../blocks/breadcrumbs
+  section.section.section--breadcrumbs.container 
+    h1.page-title Contacts us
+  section.section.section--no-top.container
+    .contacts-tabs 
+      .category-tabs(role='tablist')
+        button.category-tabs__btn(type='button' role='tab' aria-selected='true' aria-controls='contacts-tab-1') Hamburg
+        button.category-tabs__btn(type='button' role='tab' aria-selected='false' aria-controls='contacts-tab-2') Bremen
+      #contacts-tab-1.contacts-tabs__content(role='tablist')
+        .contacts-block 
+          .contacts-block__col
+            address.contacts-block__address Dammtorwall 7a #[br] 20354 Hamburg, Germany
+          .contacts-block__col
+            a.contacts-block__link(href="tel:+49 40 359 833 720") +49 40 359 833 720 
+          .contacts-block__col
+            a.contacts-block__link(href="mailto:hamburg@stenaglovis.com") hamburg@stenaglovis.com
+          .contacts-block__col.contacts-block__col--socials
+            a.contacts-block__socials(href="")  LinkedIn
+            a.contacts-block__socials(href="")  Facebook
+        .contacts-map.contacts-tabs__map
+          picture.contacts-map__image
+            img(src=require('@/images/map1.jpg'), alt='')
+          .contacts-map__pin
+            svg(width='48' height='48')
+              use(xlink:href='sprite.svg#pin_sprite')
+            .contacts-map__pin-content.pin-content
+              h5.pin-content__title SG
+              address.pin-content__address Dammtorwall 7a20354 Hamburg, Germany
+              a.pin-content__link(href='tel:+49023246866670') +49 40 359 833 720
+          a.contacts-map__route(href='' target="_blank") Routeplaner
+            svg(width='20' height='20')
+              use(xlink:href='sprite.svg#route_sprite') 
+      #contacts-tab-2.contacts-tabs__content(role='tablist')
+        .contacts-block 
+          .contacts-block__col
+            address.contacts-block__address Dammtorwall 7a #[br] 20354 Hamburg, Germany 222
+          .contacts-block__col
+            a.contacts-block__link(href="tel:+49 40 359 833 720") +49 40 359 833 720 
+          .contacts-block__col
+            a.contacts-block__link(href="mailto:hamburg@stenaglovis.com") hamburg@stenaglovis.com
+          .contacts-block__col.contacts-block__col--socials
+            a.contacts-block__socials(href="")  LinkedIn
+            a.contacts-block__socials(href="")  Facebook
+        .contacts-map.contacts-tabs__map
+          picture.contacts-map__image
+            img(src=require('@/images/map1.jpg'), alt='')
+          .contacts-map__pin
+            svg(width='48' height='48')
+              use(xlink:href='sprite.svg#pin_sprite')
+            .contacts-map__pin-content.pin-content
+              h5.pin-content__title SG
+              address.pin-content__address Dammtorwall 7a20354 Hamburg, Germany
+              a.pin-content__link(href='tel:+49023246866670') +49 40 359 833 720
+          a.contacts-map__route(href='' target="_blank") Routeplaner
+            svg(width='20' height='20')
+              use(xlink:href='sprite.svg#route_sprite') 
+  - locals.sectionTitle = 'This links could help you'
+  include ../blocks/block-links

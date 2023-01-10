@@ -5,3 +5,12 @@ block content
   include ../blocks/breadcrumbs
   section.section.section--breadcrumbs.container 
     h1.page-title Delivery addresses
+  section.section.section--no-top.container 
+    .delivery
+      each val in [1,1,1,1,1,1,1,1,1,1,1,1]
+        .delivery__item
+          h5.delivery__city Bremerhaven
+          address.delivery__address BLG AutoTerminal BremerhavenSenator-Borttscheller-Str. 127568 Bremerhaven, Germany
+          a.delivery__link(href="tel:+49 471 484 4316") +49 471 484 4316 
+          a.delivery__link(href="mailto:tobias.rubow@blg.de") tobias.rubow@blg.de
+  include ../blocks/cta

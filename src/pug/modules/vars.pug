@@ -51,13 +51,18 @@
     },
     {
       name:'About us',
-        link:`${htmlWebpackPlugin.options.path}/about.html`,
-      hasSub:false,
+      link:`${htmlWebpackPlugin.options.path}/about.html`,
+      hasSub:[
+        {
+          name:'Group fleet',
+          link:`${htmlWebpackPlugin.options.path}/group-fleet.html`,
+        }
+      ],
     },
 
     {
       name:'Contact',
-      link: '',
+        link:`${htmlWebpackPlugin.options.path}/contacts.html`,
       hasSub:false,
     },
 

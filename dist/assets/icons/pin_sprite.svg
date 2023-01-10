@@ -1,0 +1,8 @@
+export default {
+      id: "pin_sprite-usage",
+      viewBox: "0 0 38 48",
+      url: __webpack_public_path__ + "C:\\Users\\user\\Desktop\\work\\sg\\src\\assets\\icons\\pin_sprite.svg",
+      toString: function () {
+        return this.url;
+      }
+    }

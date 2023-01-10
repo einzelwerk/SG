@@ -13,6 +13,15 @@
   border-color: currentcolor;
   border-radius: 100px;
 
+  transition: 0.5s;
+
+  &--primary {
+    &:hover {
+      color: var(--headline);
+      background: var(--main-white);
+    }
+  }
+
   &--blue {
     color: var(--accent-blue);
   }
