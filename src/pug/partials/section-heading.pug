@@ -4,10 +4,10 @@ if sectionTitle
     .section-heading__buttons-group.hidden-mobile
       if sectionButtons
         if pdfButton 
-          a.btn.btn--empty.btn--blue(href="#" download) 
+          a.btn.btn--primary.btn--blue(href="#" download) 
             span.btn__inner DOWNLOAD SCHEDULES
         else 
-          button.btn.btn--empty
+          button.btn.btn--primary(data-modal="main-modal")
             span.btn__inner Get a Quote
-          a.btn.btn--empty.btn--blue(href="#") 
+          a.btn.btn--primary.btn--blue(href="#") 
             span.btn__inner SCHEDULES

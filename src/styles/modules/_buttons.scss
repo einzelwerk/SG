@@ -24,10 +24,21 @@
 
   &--blue {
     color: var(--accent-blue);
+
+    &:hover {
+      color: var(--main-white);
+      background: var(--accent-blue);
+      border-color: var(--accent-blue);
+    }
   }
 
   &--black {
     color: var(--headline);
+
+    &:hover {
+      color: var(--main-white);
+      background: var(--background);
+    }
   }
 
   &--borderless {
@@ -64,5 +75,9 @@
     color: var(--headline);
     background: var(--main-white);
     border-color: var(--main-white);
+
+    &:hover {
+      background: #f2f4f8;
+    }
   }
 }

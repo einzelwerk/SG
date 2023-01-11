@@ -1,3 +1,5 @@
+@use '../utils/mixins' as *;
+
 .page-title {
   max-width: 930px;
   font-size: 80px;

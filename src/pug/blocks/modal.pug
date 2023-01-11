@@ -1,0 +1,40 @@
+.modal(data-modal-el="main-modal")
+  .modal__inner
+    .modal__close 
+      svg(width="24" height="24")
+        use(xlink:href="sprite.svg#close_sprite") 
+    h4.modal__title Get a quote
+    .modal__desc Do you enjoy working with and learning from people from? You could 
+      a(href="mailto:email@gmail.com") send an email to us 
+      | and with different experiences?
+    .modal__form 
+      form.main-form(action="")
+        .main-form__item
+          label.main-form__label(for="modal-name")
+            input.main-form__input#modal-name(type="text" placeholder="Full name")
+        .main-form__item
+          label.main-form__label(for="modal-email")
+            input.main-form__input#modal-email(type="text" placeholder="E-Mail")
+        .main-form__item
+          label.main-form__label(for="modal-phone")
+            input.main-form__input#modal-phone(type="text" placeholder="Phone*")
+        .main-form__item
+          label.main-form__label(for="modal-career")
+            textarea.main-form__input#modal-message( placeholder="Message*")
+        .main-form__item.main-form__item--clip-file
+          label.main-form__label(for="modal-file")
+            input#modal-file.main-form__file.js-attached-files(type="file" multiple)
+            span.main-form__file-placeholder
+              .main-form__file-placeholder-text  Upload CV
+              svg.main-form__clip-icon(width="24" height="24")
+                use(xlink:href="sprite.svg#clip_sprite")
+          span.attached-files-area
+            span.attached-files
+        .main-form__checkbox.checkbox
+          label.main-form__checkbox-label
+            input.checkbox__input(type="checkbox")
+            .checkbox__fake
+            span I'm agree with 
+          a.checkbox__link(href="") privacy policy 
+        button.main-form__submit.btn.btn--primary.btn--filled
+          span.btn__inner Apply

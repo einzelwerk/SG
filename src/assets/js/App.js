@@ -6,6 +6,6 @@ import './ServicesCards';
 import './Sliders';
 import './Tabs';
 import './Faq';
-import './Marquee';
 import './Video';
 import './AttachedFiles';
+import './Modal';

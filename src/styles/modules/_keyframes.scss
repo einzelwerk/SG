@@ -1,3 +1,5 @@
+@use '../utils/mixins' as *;
+
 @keyframes blink-color {
   0% {
     background: currentcolor;

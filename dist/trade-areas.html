@@ -39,7 +39,7 @@
       </li>
     </ul>
   </nav>
-  <button class="header__btn btn btn--filled" type="button"><span class="btn__inner">FREIGHT INQUIRE</span></button>
+  <button class="header__btn btn btn--filled" data-modal="main-modal" type="button"><span class="btn__inner">FREIGHT INQUIRE</span></button>
 </header>
     <div id="smooth-wrapper"> 
       <div id="smooth-content">
@@ -51,7 +51,7 @@
       <h1 class="hero__title">Trade Areas</h1>
       <p class="hero__desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
       <div class="hero__buttons">
-        <button class="hero__btn btn btn--primary" type="button"><span class="btn__inner btn__inner--mark">EXPLORE BELOW</span></button>
+        <button class="hero__btn btn btn--primary js-scroll-to-section" type="button"><span class="btn__inner btn__inner--mark">EXPLORE BELOW</span></button>
       </div>
     </div>
   </div>
@@ -59,18 +59,18 @@
 <section class="section container">
 <div class="section-heading">
   <h2 class="section-heading__title">Trade Maps Deep Sea Services</h2>
-  <div class="section-heading__buttons-group hidden-mobile"><a class="btn btn--empty btn--blue" href="#" download> <span class="btn__inner">DOWNLOAD SCHEDULES</span></a>
+  <div class="section-heading__buttons-group hidden-mobile"><a class="btn btn--primary btn--blue" href="#" download> <span class="btn__inner">DOWNLOAD SCHEDULES</span></a>
   </div>
 </div>
   <div class="map-wrapper">
     <div class="maps-category-wrapper" role="tablist">
       <div class="maps-category">
-        <button class="maps-category__btn btn" type="button" role="tab" aria-selected="true" aria-controls="map-0"> <span class="btn__inner">EU - Far East</span></button>
-        <button class="maps-category__btn btn" type="button" role="tab" aria-selected="false" aria-controls="map-1"> <span class="btn__inner">EU - Far East</span></button>
-        <button class="maps-category__btn btn" type="button" role="tab" aria-selected="false" aria-controls="map-2"> <span class="btn__inner">EU - Far East</span></button>
-        <button class="maps-category__btn btn" type="button" role="tab" aria-selected="false" aria-controls="map-3"> <span class="btn__inner">EU - Far East</span></button>
-        <button class="maps-category__btn btn" type="button" role="tab" aria-selected="false" aria-controls="map-4"> <span class="btn__inner">EU - Far East</span></button>
-        <button class="maps-category__btn btn" type="button" role="tab" aria-selected="false" aria-controls="map-5"> <span class="btn__inner">EU - Far East</span></button>
+        <button class="maps-category__btn btn btn--primary" type="button" role="tab" aria-selected="true" aria-controls="map-0"> <span class="btn__inner">EU - Far East</span></button>
+        <button class="maps-category__btn btn btn--primary" type="button" role="tab" aria-selected="false" aria-controls="map-1"> <span class="btn__inner">EU - Far East</span></button>
+        <button class="maps-category__btn btn btn--primary" type="button" role="tab" aria-selected="false" aria-controls="map-2"> <span class="btn__inner">EU - Far East</span></button>
+        <button class="maps-category__btn btn btn--primary" type="button" role="tab" aria-selected="false" aria-controls="map-3"> <span class="btn__inner">EU - Far East</span></button>
+        <button class="maps-category__btn btn btn--primary" type="button" role="tab" aria-selected="false" aria-controls="map-4"> <span class="btn__inner">EU - Far East</span></button>
+        <button class="maps-category__btn btn btn--primary" type="button" role="tab" aria-selected="false" aria-controls="map-5"> <span class="btn__inner">EU - Far East</span></button>
       </div>
       <div class="map-container" id="map-0" role="tablist">
         <div class="map">0
@@ -108,7 +108,7 @@
           <section class="section container">
 <div class="section-heading">
   <h2 class="section-heading__title">Trade Maps Ferry Services</h2>
-  <div class="section-heading__buttons-group hidden-mobile"><a class="btn btn--empty btn--blue" href="#" download> <span class="btn__inner">DOWNLOAD SCHEDULES</span></a>
+  <div class="section-heading__buttons-group hidden-mobile"><a class="btn btn--primary btn--blue" href="#" download> <span class="btn__inner">DOWNLOAD SCHEDULES</span></a>
   </div>
 </div>
             <div class="map-container">
@@ -282,5 +282,56 @@
 </footer>
       </div>
     </div>
+<div class="modal" data-modal-el="main-modal">
+  <div class="modal__inner">
+    <div class="modal__close"> 
+      <svg width="24" height="24">
+        <use xlink:href="sprite.svg#close_sprite"> </use>
+      </svg>
+    </div>
+    <h4 class="modal__title">Get a quote</h4>
+    <div class="modal__desc">Do you enjoy working with and learning from people from? You could <a href="mailto:email@gmail.com">send an email to us </a>and with different experiences?</div>
+    <div class="modal__form"> 
+      <form class="main-form" action="">
+        <div class="main-form__item">
+          <label class="main-form__label" for="modal-name">
+            <input class="main-form__input" id="modal-name" type="text" placeholder="Full name">
+          </label>
+        </div>
+        <div class="main-form__item">
+          <label class="main-form__label" for="modal-email">
+            <input class="main-form__input" id="modal-email" type="text" placeholder="E-Mail">
+          </label>
+        </div>
+        <div class="main-form__item">
+          <label class="main-form__label" for="modal-phone">
+            <input class="main-form__input" id="modal-phone" type="text" placeholder="Phone*">
+          </label>
+        </div>
+        <div class="main-form__item">
+          <label class="main-form__label" for="modal-career">
+            <textarea class="main-form__input" id="modal-message" placeholder="Message*"></textarea>
+          </label>
+        </div>
+        <div class="main-form__item main-form__item--clip-file">
+          <label class="main-form__label" for="modal-file">
+            <input class="main-form__file js-attached-files" id="modal-file" type="file" multiple><span class="main-form__file-placeholder">
+              <div class="main-form__file-placeholder-text"> Upload CV</div>
+              <svg class="main-form__clip-icon" width="24" height="24">
+                <use xlink:href="sprite.svg#clip_sprite"></use>
+              </svg></span>
+          </label><span class="attached-files-area"><span class="attached-files"></span></span>
+        </div>
+        <div class="main-form__checkbox checkbox">
+          <label class="main-form__checkbox-label">
+            <input class="checkbox__input" type="checkbox">
+            <div class="checkbox__fake"></div><span>I'm agree with </span>
+          </label><a class="checkbox__link" href="">privacy policy </a>
+        </div>
+        <button class="main-form__submit btn btn--primary btn--filled"><span class="btn__inner">Apply</span></button>
+      </form>
+    </div>
+  </div>
+</div>
   </body>
 </html>

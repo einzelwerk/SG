@@ -13,7 +13,7 @@ class HeroVideoPlayback {
     this.heroElements = document?.querySelectorAll(' .hero__desc, .hero__title , .hero__btn:not(.js-play-hero-video)');
     this.btn = '.js-play-hero-video';
     this.state = false;
-
+    this.video = document.querySelector('.hero__media');
     this.originalText = document.querySelector(`${this.btn} span`)?.innerText;
     this.modyfText = document.querySelector(this.btn)?.dataset.switchText;
   }
@@ -33,8 +33,10 @@ class HeroVideoPlayback {
   animation(reverse = false) {
     if (!reverse) {
       document.querySelector(`${this.btn} span`).innerText = this.modyfText;
+      this.video.removeAttribute('muted');
     } else {
       document.querySelector(`${this.btn} span`).innerText = this.originalText;
+      this.video.setAttribute('muted', true);
     }
     const tl = gsap.timeline({
       paused: true,

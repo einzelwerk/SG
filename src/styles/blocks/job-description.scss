@@ -1,3 +1,5 @@
+@use '../utils/mixins' as *;
+
 .job-description {
   padding-top: 100px;
   padding-bottom: calc(var(--gap-y) * 2);

@@ -21,7 +21,8 @@ const dt = new DataTransfer();
 const attachedArea = document.querySelector('.attached-files-area');
 const placeHolderText = document.querySelector('.main-form__file-placeholder-text');
 
-function removeFile(DataTransfer, elem) {
+function removeFile(DataTransfer, elem, e) {
+  e.stopPropagation();
   const name = prev(elem, '.attached-files__item-name').innerHTML;
   elem.closest('.attached-files__item').remove();
   for (let i = 0; i < DataTransfer.items.length; i += 1) {
@@ -37,7 +38,7 @@ function removeFile(DataTransfer, elem) {
 
 function listener() {
   document.querySelectorAll('.attached-files__item-delete').forEach((elem) => {
-    elem.addEventListener('click', () => removeFile(dt, elem));
+    elem.addEventListener('click', (e) => removeFile(dt, elem, e));
     elem.addEventListener('keydown', (e) => {
       if (e.key === ' ') {
         removeFile(dt, elem);
