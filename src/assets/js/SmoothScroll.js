@@ -7,6 +7,10 @@ const smoother = ScrollSmoother.create({
   effects: true,
 });
 
-document.querySelector('.js-scroll-to-section').addEventListener('click', () => {
-  smoother.scrollTo(document.querySelector('.section-hero').offsetHeight, true, 'top top');
-});
+const scrollTarget = document.querySelector('.js-scroll-to-section');
+
+if (scrollTarget) {
+  scrollTarget.addEventListener('click', () => {
+    smoother.scrollTo(document.querySelector('.section-hero').offsetHeight, true, 'top top');
+  });
+}

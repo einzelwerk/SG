@@ -14,8 +14,9 @@ section.section.container
               span.btn__inner EU - Far East
         each val, index in arr
           .map-container(id=`map-${index}` role='tablist')
-            .map=index
+            .map
               picture.map__image
+                source(media="(max-width:556px)", srcset=require('@/images/maps/1-m.svg'))
                 img(src=require('@/images/maps/1.svg'), alt="")
     else
       #maps-tabs-1.maps-category-wrapper(role='tablist')
@@ -28,6 +29,7 @@ section.section.container
           .map-container(id=`map-${index}` role='tablist')
             .map
               picture.map__image
+                source(media="(max-width:556px)", srcset=require('@/images/maps/1-m.svg'))
                 img(src=require('@/images/maps/1.svg'), alt="")
       #maps-tabs-2.maps-category-wrapper-2(role='tablist')
         .maps-category
@@ -39,6 +41,7 @@ section.section.container
           .map-container(id=`map-${val}` role='tablist')
             .map
               picture.map__image
+                source(media="(max-width:556px)", srcset=require('@/images/maps/1-m.svg'))
                 img(src=require('@/images/maps/1.svg'), alt="")
 
 

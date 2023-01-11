@@ -10,6 +10,10 @@
   }
 
   &__item {
+    @include media(md) {
+      height: 320px;
+    }
+
     position: relative;
 
     overflow: hidden;

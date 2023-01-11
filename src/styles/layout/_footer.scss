@@ -6,8 +6,9 @@
   background: var(--main-white);
 
   &__logo {
-    width: auto;
-    max-width: 480px;
+    @include media(md) {
+      margin-bottom: 24px;
+    }
   }
 
   &__title {
@@ -32,12 +33,22 @@
 }
 
 .footer-top {
+  @include media(md) {
+    flex-direction: column;
+  }
+
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
 }
 
 .footer-middle {
+  @include media(md) {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-top: 46px;
+  }
+
   display: grid;
   grid-template-columns: max-content max-content max-content min-content;
   gap: 30px;
@@ -77,6 +88,13 @@
 }
 
 .footer-bottom {
+  @include media(md) {
+    margin-top: 48px;
+  }
+  @include media(sm) {
+    flex-direction: column-reverse;
+  }
+
   display: flex;
   justify-content: space-between;
 
@@ -86,6 +104,10 @@
   font-size: 14px;
 
   &__link-group {
+    @include media(sm) {
+      margin-bottom: 24px;
+    }
+
     display: flex;
     flex-wrap: wrap;
   }

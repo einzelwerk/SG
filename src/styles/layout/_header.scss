@@ -2,6 +2,11 @@
 @use '../utils/mixins' as *;
 
 .header {
+  @include media(md) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
   position: absolute;
   z-index: 1010;
   top: 0;
@@ -17,8 +22,30 @@
 
   color: var(--main-color);
 
+  transition: background 0.5s;
+
+  &--menu-is-open {
+    background: var(--main-white);
+  }
+
   &__nav {
     margin-right: auto;
     margin-left: 40px;
+  }
+}
+
+.m-button-group {
+  display: flex;
+
+  &__btn {
+    margin-right: 12px;
+
+    .btn__inner {
+      padding: 8px 13px;
+    }
+
+    &:last-child {
+      margin: 0;
+    }
   }
 }

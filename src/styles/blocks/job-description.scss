@@ -1,6 +1,13 @@
 @use '../utils/mixins' as *;
 
 .job-description {
+  @include media(md) {
+    padding-top: 0;
+    padding-bottom: 60px;
+    color: var(--main-white);
+    background: transparent;
+  }
+
   padding-top: 100px;
   padding-bottom: calc(var(--gap-y) * 2);
 
@@ -10,6 +17,11 @@
   border-radius: 48px 48px 0 0;
 
   &__inner {
+    @include media(md) {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
@@ -31,11 +43,20 @@
     justify-content: space-between;
 
     &--desc {
+      @include media(md) {
+        padding-right: 0;
+      }
+
       padding-right: 130px;
     }
   }
 
   &__title {
+    @include media(md) {
+      margin-bottom: 24px;
+      font-size: 24px;
+    }
+
     margin-bottom: 30px;
     font-size: 32px;
     letter-spacing: -0.02em;
@@ -47,6 +68,10 @@
     letter-spacing: -0.005em;
 
     &::before {
+      @include media(md) {
+        background: var(--main-white);
+      }
+
       content: '';
 
       position: relative;

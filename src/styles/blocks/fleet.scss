@@ -1,11 +1,20 @@
 @use '../utils/mixins' as *;
 
 .fleet-list {
+  @include media(md) {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
 
   &__item {
+    @include media(md) {
+      padding: 16px;
+    }
+
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -17,11 +26,19 @@
   }
 
   &__title {
+    @include media(md) {
+      font-size: 16px;
+    }
+
     font-size: 20px;
     letter-spacing: -0.01em;
   }
 
   &__value {
+    @include media(md) {
+      font-size: 16px;
+    }
+
     font-size: 20px;
 
     span {

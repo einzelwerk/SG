@@ -1,6 +1,10 @@
 @use '../utils/mixins' as *;
 
 .page-info {
+  @include media(md) {
+    min-height: auto;
+  }
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -12,15 +16,30 @@
   border-radius: 24px;
 
   &__title {
+    @include media(md) {
+      font-size: 32px;
+    }
+
     font-size: 48px;
     letter-spacing: -0.02em;
   }
 
   &__desc-group {
+    @include media(md) {
+      flex-direction: column;
+      margin-top: 40px;
+    }
+
     display: flex;
   }
 
   &__desc {
+    @include media(md) {
+      max-width: 100%;
+      margin-right: 0;
+      margin-bottom: 16px;
+    }
+
     max-width: 520px;
     margin-right: 10%;
     line-height: 150%;

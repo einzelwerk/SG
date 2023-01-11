@@ -5,6 +5,10 @@
   height: 32px;
 
   &--big {
+    @include media(md) {
+      max-width: 300px;
+    }
+
     width: auto;
     max-width: 480px;
     height: auto;

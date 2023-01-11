@@ -1,6 +1,10 @@
 @use '../utils/mixins' as *;
 
 .page-title {
+  @include media(md) {
+    font-size: 40px;
+  }
+
   max-width: 930px;
   font-size: 80px;
   line-height: 110%;
@@ -8,6 +12,10 @@
 }
 
 .page-desc {
+  @include media(md) {
+    font-size: 20px;
+  }
+
   max-width: 520px;
   margin-top: 30px;
 

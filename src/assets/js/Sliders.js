@@ -48,6 +48,9 @@ class Sliders {
       spaceBetween: 16,
       breakpoints: {
         768: {
+          slidesPerView: 2.2,
+        },
+        1024: {
           slidesPerView: 4,
         },
       },
@@ -64,6 +67,9 @@ class Sliders {
       spaceBetween: 16,
       breakpoints: {
         768: {
+          slidesPerView: 2.2,
+        },
+        1024: {
           slidesPerView: 4,
         },
       },

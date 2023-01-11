@@ -1,6 +1,10 @@
 @use '../utils/mixins' as *;
 
 .our-mission {
+  @include media(md) {
+    flex-direction: column-reverse;
+  }
+
   display: flex;
   justify-content: space-between;
 
@@ -17,6 +21,11 @@
   }
 
   &__text {
+    @include media(md) {
+      margin-bottom: 20px;
+      padding-left: 0;
+    }
+
     display: flex;
     flex: 1;
     flex-direction: column;

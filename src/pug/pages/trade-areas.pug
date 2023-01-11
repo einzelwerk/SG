@@ -17,6 +17,7 @@ block content
     .map-container
       .map
         picture.map__image
+          source(media="(max-width:556px)", srcset=require('@/images/maps/1-m.svg'))
           img(src=require('@/images/maps/1.svg'), alt="")
   include ../blocks/cta-buttons
   - locals.sectionTitle = 'Frequently Asked Questions'

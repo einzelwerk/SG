@@ -1,6 +1,10 @@
 @use '../utils/mixins' as *;
 
 .cta-work-wrapper {
+  @include media(md) {
+    padding-bottom: calc(400px / 328px * 100%);
+  }
+
   position: relative;
   height: 0;
   padding-bottom: calc(500px / 1290px * 100%);
@@ -23,6 +27,11 @@
   border-radius: 24px;
 
   &__title {
+    @include media(md) {
+      font-size: 40px;
+      line-height: 120%;
+    }
+
     max-width: 600px;
     font-size: 64px;
     line-height: 112%;

@@ -9,3 +9,4 @@ import './Faq';
 import './Video';
 import './AttachedFiles';
 import './Modal';
+import './SubMenu';

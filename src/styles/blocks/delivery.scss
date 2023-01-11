@@ -1,6 +1,11 @@
 @use '../utils/mixins' as *;
 
 .delivery {
+  @include media(md) {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 100px 30px;

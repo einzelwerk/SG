@@ -10,6 +10,10 @@
   }
 
   &__item {
+    @include media(md) {
+      height: 200px;
+    }
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -24,6 +28,10 @@
   }
 
   &__title {
+    @include media(md) {
+      font-size: 20px;
+    }
+
     max-width: 320px;
     font-size: 24px;
     line-height: 133%;

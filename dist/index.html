@@ -9,7 +9,7 @@
   <body>
 <header class="header container">
   <div class="header__logo logo"> <a class="logo__link" href=""> <img class="logo__src" src="assets/images/logo.svg" alt=""></a></div>
-  <nav class="header__nav nav">
+  <nav class="header__nav nav hidden-mobile">
     <ul class="nav-list"> 
       <li class="nav__item nav__item--has-children"><a class="nav__link" href="">Business Areas</a>
         <ul class="nav__sub sub-menu">
@@ -39,7 +39,56 @@
       </li>
     </ul>
   </nav>
-  <button class="header__btn btn btn--filled" data-modal="main-modal" type="button"><span class="btn__inner">FREIGHT INQUIRE</span></button>
+  <nav class="header__mobile-nav mobile-nav hidden-desktop" id="nav">
+    <ul class="mobile-nav__list">
+      <li class="mobile-nav__item mobile-nav__item--has-children"><span class="mobile-nav__item-wrap"><a class="mobile-nav__link" href="">Business Areas</a><span class="mobile-nav__arrow">
+            <svg width="12" height="12">
+              <use xlink:href="sprite.svg#arrow_sprite"> </use>
+            </svg></span></span>
+        <ul class="mobile-nav__sub mobile-sub-menu">
+          <li class="mobile-sub-menu__item"> <a class="mobile-sub-menu__link" href="/SG/deep-sea.html">Deep Sea Servces</a></li>
+          <li class="mobile-sub-menu__item"> <a class="mobile-sub-menu__link" href="/SG/ferry-services.html">Ferry Services</a></li>
+          <li class="mobile-sub-menu__item"> <a class="mobile-sub-menu__link" href="/SG/cargo.html">Cargo Types</a></li>
+        </ul>
+      </li>
+      <li class="mobile-nav__item"><span class="mobile-nav__item-wrap"><a class="mobile-nav__link" href="/SG/trade-areas.html">Trade Areas</a></span>
+      </li>
+      <li class="mobile-nav__item mobile-nav__item--has-children"><span class="mobile-nav__item-wrap"><a class="mobile-nav__link" href="">Customer service</a><span class="mobile-nav__arrow">
+            <svg width="12" height="12">
+              <use xlink:href="sprite.svg#arrow_sprite"> </use>
+            </svg></span></span>
+        <ul class="mobile-nav__sub mobile-sub-menu">
+          <li class="mobile-sub-menu__item"> <a class="mobile-sub-menu__link" href="/SG/delivery.html">Delivery</a></li>
+          <li class="mobile-sub-menu__item"> <a class="mobile-sub-menu__link" href="/SG/schedules.html">Schedules</a></li>
+        </ul>
+      </li>
+      <li class="mobile-nav__item"><span class="mobile-nav__item-wrap"><a class="mobile-nav__link" href="/SG/career.html">Career</a></span>
+      </li>
+      <li class="mobile-nav__item"><span class="mobile-nav__item-wrap"><a class="mobile-nav__link" href="/SG/job-page.html">Job page</a></span>
+      </li>
+      <li class="mobile-nav__item mobile-nav__item--has-children"><span class="mobile-nav__item-wrap"><a class="mobile-nav__link" href="/SG/about.html">About us</a><span class="mobile-nav__arrow">
+            <svg width="12" height="12">
+              <use xlink:href="sprite.svg#arrow_sprite"> </use>
+            </svg></span></span>
+        <ul class="mobile-nav__sub mobile-sub-menu">
+          <li class="mobile-sub-menu__item"> <a class="mobile-sub-menu__link" href="/SG/group-fleet.html">Group fleet</a></li>
+        </ul>
+      </li>
+      <li class="mobile-nav__item"><span class="mobile-nav__item-wrap"><a class="mobile-nav__link" href="/SG/contacts.html">Contact</a></span>
+      </li>
+    </ul><a class="mobile-nav__btn btn btn--primary" href=""><span class="btn__inner"> Download Presentation</span></a><span class="mobile-nav__copyright"> © Stena Glovis. 2022</span>
+  </nav>
+  <button class="header__btn btn btn--filled hidden-mobile" data-modal="main-modal" type="button"><span class="btn__inner">FREIGHT INQUIRE</span></button>
+  <div class="m-button-group hidden-desktop">
+    <button class="m-button-group__btn btn btn--filled" data-modal="main-modal" type="button"><span class="btn__inner">
+        <svg width="24" height="24">
+          <use xlink:href="sprite.svg#ship_sprite"> </use>
+        </svg></span></button>
+    <button class="m-button-group__btn btn btn--primary open-menu-btn"><span class="btn__inner">
+        <svg width="24" height="24">
+          <use xlink:href="sprite.svg#menu_sprite"> </use>
+        </svg></span></button>
+  </div>
 </header>
     <div id="smooth-wrapper"> 
       <div id="smooth-content">
@@ -146,7 +195,7 @@
         <picture class="types__image"> <img src="assets/images/types/6.jpg" alt=""></picture>
         <h3 class="types__title">Lengthy Cargo</h3>
       </div>
-      <div class="types__more types-more"> 
+      <div class="types__more swiper-slide types-more"> 
         <h4 class="types-more__title">Learn more about all our cargo capabilities</h4><a class="types-more__btn btn btn--primary"><span class="btn__inner">Learn More</span></a>
       </div>
     </div>
@@ -187,32 +236,44 @@
                 </div>
                 <div class="map-container" id="map-0" role="tablist">
                   <div class="map">
-                    <picture class="map__image"><img src="assets/images/maps/1.svg" alt=""></picture>
+                    <picture class="map__image">
+                      <source media="(max-width:556px)" srcset="assets/images/maps/1-m.svg"><img src="assets/images/maps/1.svg" alt="">
+                    </picture>
                   </div>
                 </div>
                 <div class="map-container" id="map-1" role="tablist">
                   <div class="map">
-                    <picture class="map__image"><img src="assets/images/maps/1.svg" alt=""></picture>
+                    <picture class="map__image">
+                      <source media="(max-width:556px)" srcset="assets/images/maps/1-m.svg"><img src="assets/images/maps/1.svg" alt="">
+                    </picture>
                   </div>
                 </div>
                 <div class="map-container" id="map-2" role="tablist">
                   <div class="map">
-                    <picture class="map__image"><img src="assets/images/maps/1.svg" alt=""></picture>
+                    <picture class="map__image">
+                      <source media="(max-width:556px)" srcset="assets/images/maps/1-m.svg"><img src="assets/images/maps/1.svg" alt="">
+                    </picture>
                   </div>
                 </div>
                 <div class="map-container" id="map-3" role="tablist">
                   <div class="map">
-                    <picture class="map__image"><img src="assets/images/maps/1.svg" alt=""></picture>
+                    <picture class="map__image">
+                      <source media="(max-width:556px)" srcset="assets/images/maps/1-m.svg"><img src="assets/images/maps/1.svg" alt="">
+                    </picture>
                   </div>
                 </div>
                 <div class="map-container" id="map-4" role="tablist">
                   <div class="map">
-                    <picture class="map__image"><img src="assets/images/maps/1.svg" alt=""></picture>
+                    <picture class="map__image">
+                      <source media="(max-width:556px)" srcset="assets/images/maps/1-m.svg"><img src="assets/images/maps/1.svg" alt="">
+                    </picture>
                   </div>
                 </div>
                 <div class="map-container" id="map-5" role="tablist">
                   <div class="map">
-                    <picture class="map__image"><img src="assets/images/maps/1.svg" alt=""></picture>
+                    <picture class="map__image">
+                      <source media="(max-width:556px)" srcset="assets/images/maps/1-m.svg"><img src="assets/images/maps/1.svg" alt="">
+                    </picture>
                   </div>
                 </div>
               </div>
@@ -227,32 +288,44 @@
                 </div>
                 <div class="map-container" id="map-7" role="tablist">
                   <div class="map">
-                    <picture class="map__image"><img src="assets/images/maps/1.svg" alt=""></picture>
+                    <picture class="map__image">
+                      <source media="(max-width:556px)" srcset="assets/images/maps/1-m.svg"><img src="assets/images/maps/1.svg" alt="">
+                    </picture>
                   </div>
                 </div>
                 <div class="map-container" id="map-8" role="tablist">
                   <div class="map">
-                    <picture class="map__image"><img src="assets/images/maps/1.svg" alt=""></picture>
+                    <picture class="map__image">
+                      <source media="(max-width:556px)" srcset="assets/images/maps/1-m.svg"><img src="assets/images/maps/1.svg" alt="">
+                    </picture>
                   </div>
                 </div>
                 <div class="map-container" id="map-9" role="tablist">
                   <div class="map">
-                    <picture class="map__image"><img src="assets/images/maps/1.svg" alt=""></picture>
+                    <picture class="map__image">
+                      <source media="(max-width:556px)" srcset="assets/images/maps/1-m.svg"><img src="assets/images/maps/1.svg" alt="">
+                    </picture>
                   </div>
                 </div>
                 <div class="map-container" id="map-10" role="tablist">
                   <div class="map">
-                    <picture class="map__image"><img src="assets/images/maps/1.svg" alt=""></picture>
+                    <picture class="map__image">
+                      <source media="(max-width:556px)" srcset="assets/images/maps/1-m.svg"><img src="assets/images/maps/1.svg" alt="">
+                    </picture>
                   </div>
                 </div>
                 <div class="map-container" id="map-11" role="tablist">
                   <div class="map">
-                    <picture class="map__image"><img src="assets/images/maps/1.svg" alt=""></picture>
+                    <picture class="map__image">
+                      <source media="(max-width:556px)" srcset="assets/images/maps/1-m.svg"><img src="assets/images/maps/1.svg" alt="">
+                    </picture>
                   </div>
                 </div>
                 <div class="map-container" id="map-12" role="tablist">
                   <div class="map">
-                    <picture class="map__image"><img src="assets/images/maps/1.svg" alt=""></picture>
+                    <picture class="map__image">
+                      <source media="(max-width:556px)" srcset="assets/images/maps/1-m.svg"><img src="assets/images/maps/1.svg" alt="">
+                    </picture>
                   </div>
                 </div>
               </div>

@@ -46,6 +46,10 @@
   }
 
   &__inner {
+    @include media(md) {
+      padding: 10px 16px;
+    }
+
     display: block;
     padding: 12px 20px;
 

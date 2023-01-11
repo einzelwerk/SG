@@ -1,12 +1,20 @@
 @use '../utils/mixins' as *;
 
 .section-heading {
+  @include media(md) {
+    margin-bottom: 40px;
+  }
+
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 64px;
 
   &__title {
+    @include media(md) {
+      font-size: 32px;
+    }
+
     max-width: 860px;
     font-size: 48px;
     line-height: 120%;

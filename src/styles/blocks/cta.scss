@@ -1,12 +1,20 @@
 @use '../utils/mixins' as *;
 
 .cta-wrapper {
+  @include media(md) {
+    padding-bottom: calc(400px / 328px * 100%);
+  }
+
   position: relative;
   height: 0;
   padding-bottom: calc(500px / 1290px * 100%);
 }
 
 .cta {
+  @include media(md) {
+    padding: 20px;
+  }
+
   position: absolute;
   top: 0;
   left: 0;
@@ -45,6 +53,10 @@
   }
 
   &__title {
+    @include media(sm) {
+      font-size: 40px;
+    }
+
     display: block;
 
     max-width: 478px;

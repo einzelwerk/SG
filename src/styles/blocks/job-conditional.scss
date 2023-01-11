@@ -2,10 +2,12 @@
 
 .job-conditional {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  margin: -12px;
 
   &__item {
-    margin-right: 12px;
+    margin: 6px;
     padding: 6px 16px;
     border: 1px solid var(--main-white);
     border-radius: 100px;
@@ -13,10 +15,6 @@
     &--filled {
       color: var(--background);
       background: var(--main-white);
-    }
-
-    &:last-child {
-      margin: 0;
     }
   }
 }

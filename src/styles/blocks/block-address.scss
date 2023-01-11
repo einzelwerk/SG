@@ -2,10 +2,19 @@
 
 .block-address {
   &__content {
+    @include media(md) {
+      flex-direction: column;
+    }
+
     display: flex;
   }
 
   &__text {
+    @include media(md) {
+      margin-bottom: 32px;
+      padding: 0;
+    }
+
     flex: 1;
     padding-right: 140px;
   }
@@ -23,6 +32,11 @@
   }
 
   &__title {
+    @include media(md) {
+      margin-bottom: 20px;
+      font-size: 32px;
+    }
+
     margin-bottom: 30px;
     font-size: 48px;
     letter-spacing: -0.02em;
@@ -43,10 +57,23 @@
 }
 
 .address-group {
+  @include media(md) {
+    flex-direction: column;
+    margin-top: 50px;
+  }
+
   display: flex;
   margin-top: 80px;
 
   &__item {
+    @include media(md) {
+      margin-bottom: 50px;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+
     display: flex;
     flex: 1;
     flex-direction: column;
@@ -58,12 +85,21 @@
   }
 
   &__title {
+    @include media(md) {
+      margin-bottom: 24px;
+      font-size: 24px;
+    }
+
     margin-bottom: 30px;
     font-size: 32px;
     letter-spacing: -0.02em;
   }
 
   &__address {
+    @include media(md) {
+      max-width: 300px;
+    }
+
     max-width: 270px;
     margin-bottom: 12px;
 

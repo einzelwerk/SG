@@ -2,15 +2,38 @@
 
 .contacts-tabs {
   &__content {
+    @include media(md) {
+      margin-top: 32px;
+    }
+
     margin-top: 64px;
   }
 
+  &__title {
+    @include media(md) {
+      margin-bottom: 32px;
+      font-size: 32px;
+    }
+
+    margin-bottom: 50px;
+    font-size: 48px;
+  }
+
   &__map {
+    @include media(md) {
+      margin-top: 40px;
+    }
+
     margin-top: 64px;
   }
 }
 
 .contacts-block {
+  @include media(md) {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
@@ -28,12 +51,21 @@
     letter-spacing: -0.01em;
 
     &--socials {
+      @include media(md) {
+        flex-direction: row;
+      }
+
       display: flex;
       flex-direction: column;
     }
   }
 
   &__socials {
+    @include media(md) {
+      margin-right: 16px;
+      margin-bottom: 0;
+    }
+
     margin-bottom: 16px;
 
     &:hover {

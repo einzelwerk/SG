@@ -26,6 +26,10 @@
   }
 
   &__title {
+    @include media(md) {
+      font-size: 20px;
+    }
+
     font-size: 24px;
     letter-spacing: -0.01em;
   }
