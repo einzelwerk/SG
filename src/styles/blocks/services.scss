@@ -1,27 +1,49 @@
 @use '../utils/mixins' as *;
 
+.services-wrapper {
+  --spacing: 150px;
+}
+
 .services {
   position: relative;
-  min-height: 100vh;
 
   &__item {
-    --spacing: 1rem;
+    @include media(md) {
+      position: relative;
+      z-index: auto;
+      top: auto;
 
-    position: absolute;
-    top: 0;
+      height: auto;
+      margin-bottom: 16px;
+      padding-bottom: calc(300px / 328px * 100%);
+
+      &:last-child {
+        margin: 0;
+      }
+    }
 
     overflow: hidden;
 
     width: 100%;
-    height: 70vh;
     padding-bottom: calc(500px / 1290px * 100%);
 
     background: white;
     border-radius: 32px;
 
+    &:nth-child(1) {
+      @include media(md) {
+        position: relative;
+        top: auto;
+        margin: 0;
+      }
+
+      position: absolute;
+      z-index: 2;
+      top: calc(var(--spacing) * -1);
+      margin-top: var(--spacing);
+    }
+
     &:nth-child(2) {
-      z-index: -1;
-      top: calc(var(--spacing) * 2);
       color: var(--headline);
     }
   }
@@ -71,6 +93,10 @@
   }
 
   &__title {
+    @include media(md) {
+      font-size: 24px;
+    }
+
     margin-bottom: 20px;
     font-size: 36px;
     line-height: 120%;

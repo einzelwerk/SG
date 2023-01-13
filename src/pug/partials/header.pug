@@ -12,32 +12,45 @@ header.header.container
               each val2 in val.hasSub
                 li.sub-menu__item 
                   a.sub-menu__link(href=val2.link)= val2.name
-  nav.header__mobile-nav.mobile-nav.hidden-desktop#nav
-    ul.mobile-nav__list
-      each val in menu 
-        li.mobile-nav__item(class=val.hasSub ? 'mobile-nav__item--has-children' : '')
-          span.mobile-nav__item-wrap
-            a.mobile-nav__link(href=val.link)=val.name
-            if val.hasSub 
-              span.mobile-nav__arrow
-                svg(width="12" height="12")
-                  use(xlink:href="sprite.svg#arrow_sprite") 
-          if val.hasSub 
-            ul.mobile-nav__sub.mobile-sub-menu
-              each val2 in val.hasSub
-                li.mobile-sub-menu__item 
-                  a.mobile-sub-menu__link(href=val2.link)= val2.name
-    a.mobile-nav__btn.btn.btn--primary(href="")
-      span.btn__inner  Download Presentation
-    span.mobile-nav__copyright  © Stena Glovis. 2022
   button.header__btn.btn.btn--filled.hidden-mobile(data-modal="main-modal" type="button")
     span.btn__inner FREIGHT INQUIRE
   .m-button-group.hidden-desktop
-    button.m-button-group__btn.btn.btn--filled(data-modal="main-modal" type="button")
+    button.m-button-group__btn.btn.btn--filled(data-modal="main-modal" type="button" aria-label="Open modal")
       span.btn__inner
         svg(width="24" height="24")
           use(xlink:href="sprite.svg#ship_sprite") 
-    button.m-button-group__btn.btn.btn--primary.open-menu-btn
+    button.m-button-group__btn.btn.btn--primary.open-menu-btn(aria-label="Menü schließen" aria-expanded="false")
       span.btn__inner
         svg(width="24" height="24")
           use(xlink:href="sprite.svg#menu_sprite") 
+nav.mobile-nav.hidden-desktop#nav
+  .mobile-nav__header
+    .logo
+      a.logo__link(href="")
+        img.logo__src(src=require('@/images/logo-black.svg'))
+    .m-button-group.hidden-desktop
+      button.m-button-group__btn.btn.btn--filled(data-modal="main-modal" type="button" aria-label="Open modal")
+        span.btn__inner
+          svg(width="24" height="24")
+            use(xlink:href="sprite.svg#ship_sprite") 
+      button.m-button-group__btn.btn.btn--primary.open-menu-btn(aria-label="Menü öffnen" aria-expanded="false")
+        span.btn__inner
+          svg(width="24" height="24")
+            use(xlink:href="sprite.svg#close_sprite") 
+  ul.mobile-nav__list
+    each val in menu 
+      li.mobile-nav__item(class=val.hasSub ? 'mobile-nav__item--has-children' : '')
+        span.mobile-nav__item-wrap
+          a.mobile-nav__link(href=val.link)=val.name
+          if val.hasSub 
+            span.mobile-nav__arrow
+              svg(width="12" height="12")
+                use(xlink:href="sprite.svg#arrow_sprite") 
+        if val.hasSub 
+          ul.mobile-nav__sub.mobile-sub-menu
+            each val2 in val.hasSub
+              li.mobile-sub-menu__item 
+                a.mobile-sub-menu__link(href=val2.link)= val2.name
+  a.mobile-nav__btn.btn.btn--primary(href="")
+    span.btn__inner  Download Presentation
+  span.mobile-nav__copyright  © Stena Glovis. 2022

@@ -98,7 +98,7 @@
 .mobile-nav {
   position: fixed;
   z-index: 1020;
-  top: var(--header-height);
+  top: 0;
   right: 0;
   transform: translateX(100%);
 
@@ -118,6 +118,12 @@
 
   &.opened {
     transform: translateX(0%);
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   &__list {

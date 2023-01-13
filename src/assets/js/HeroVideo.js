@@ -34,9 +34,11 @@ class HeroVideoPlayback {
     if (!reverse) {
       document.querySelector(`${this.btn} span`).innerText = this.modyfText;
       this.video.removeAttribute('muted');
+      document.querySelector('.section-hero').classList.add('playing-video');
     } else {
       document.querySelector(`${this.btn} span`).innerText = this.originalText;
       this.video.setAttribute('muted', true);
+      document.querySelector('.section-hero').classList.remove('playing-video');
     }
     const tl = gsap.timeline({
       paused: true,

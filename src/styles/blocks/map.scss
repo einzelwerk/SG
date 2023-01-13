@@ -75,4 +75,13 @@
       object-fit: cover;
     }
   }
+
+  &__buttons {
+    display: flex;
+    margin-top: 40px;
+  }
+
+  &__buttons-item {
+    margin-right: 12px;
+  }
 }

@@ -2,6 +2,7 @@
 
 .breadcrumbs {
   &__list {
+    overflow: auto;
     display: flex;
     align-items: center;
   }
@@ -10,6 +11,7 @@
     display: flex;
     align-items: center;
     margin-right: 12px;
+    white-space: nowrap;
 
     &::after {
       content: '';
