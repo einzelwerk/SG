@@ -88,5 +88,10 @@
   &__btn {
     align-self: flex-start;
     margin-top: 30px;
+
+    &:hover {
+      color: var(--headline);
+      background: var(--white);
+    }
   }
 }

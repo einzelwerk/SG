@@ -7,6 +7,15 @@
 .services {
   position: relative;
 
+  &__btn {
+    align-self: flex-start;
+
+    &:hover {
+      color: var(--headline);
+      background: var(--white);
+    }
+  }
+
   &__item {
     @include media(md) {
       position: relative;
@@ -45,6 +54,15 @@
 
     &:nth-child(2) {
       color: var(--headline);
+
+      .services__btn {
+        border-color: var(--headline);
+
+        &:hover {
+          color: var(--white);
+          background: var(--headline);
+        }
+      }
     }
   }
 
@@ -112,12 +130,9 @@
     line-height: 150%;
   }
 
-  &__btn {
-    align-self: flex-start;
-  }
-
   &__left {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
   }
 }
