@@ -32,6 +32,14 @@
     margin-right: auto;
     margin-left: 40px;
   }
+
+  &__btn {
+    &:hover {
+      color: var(--white);
+      background: var(--accent-blue);
+      border-color: var(--accent-blue);
+    }
+  }
 }
 
 .m-button-group {

@@ -9,7 +9,11 @@
   grid-template-columns: repeat(3, 1fr);
   gap: var(--gap);
 
-  &__item {
+  &__btn {
+    margin-top: 30px;
+  }
+
+  &__link {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -20,6 +24,17 @@
 
     background: var(--main-white);
     border-radius: 24px;
+
+    transition: background 0.5s;
+
+    &:hover {
+      background: var(--ghost-color);
+
+      .jobs__btn {
+        color: var(--white);
+        background: var(--headline);
+      }
+    }
   }
 
   &__city {
@@ -42,10 +57,6 @@
     margin-bottom: 16px;
     font-size: 32px;
     letter-spacing: -0.02em;
-  }
-
-  &__btn {
-    margin-top: 30px;
   }
 }
 

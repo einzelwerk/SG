@@ -47,6 +47,14 @@
   &__btn {
     margin-right: 8px;
 
+    &.btn {
+      &--borderless {
+        &:hover {
+          background: rgb(255 255 255 / 12%);
+        }
+      }
+    }
+
     &:last-child {
       margin: 0;
     }

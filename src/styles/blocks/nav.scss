@@ -38,6 +38,11 @@
   &__item {
     margin-bottom: 12px;
     letter-spacing: -0.005em;
+    transition: opacity 0.5s;
+
+    &:hover {
+      opacity: 0.5;
+    }
 
     &:last-child {
       margin: 0;

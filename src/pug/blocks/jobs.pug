@@ -1,31 +1,15 @@
 section.section.container
   include ../partials/section-heading
-  .jobs 
-    .jobs__item 
-      .jobs__city Hamburg
-      h2.jobs__title International transportation manager
-      ul.jobs__conditions.working-conditions
-        li.working-conditions__item Up to €50,000 per year
-        li.working-conditions__item Full time
-      a.jobs__btn.btn.btn--primary(href="#")
-        span.btn__inner   LEARN MORE
-    .jobs__item 
-      .jobs__city Hamburg
-      h2.jobs__title International transportation manager
-      ul.jobs__conditions.working-conditions
-        li.working-conditions__item Up to €50,000 per year
-        li.working-conditions__item Full time
-      a.jobs__btn.btn.btn--primary(href="#")
-        span.btn__inner   LEARN MORE
-    .jobs__item 
-      .jobs__city Hamburg
-      h2.jobs__title International transportation manager
-      ul.jobs__conditions.working-conditions
-        li.working-conditions__item Up to €50,000 per year
-        li.working-conditions__item Full time
-      a.jobs__btn.btn.btn--primary(href="#")
-        span.btn__inner   LEARN MORE
-  .more-link-wrapper
-    a.more-link.btn.btn--primary(href="")
-      span.btn__inner VIEW ALL 
+  .jobs
+    each val in [1,2,3]
+      article.jobs__item
+        a.jobs__link(href="#")
+          .jobs__city Hamburg
+          h2.jobs__title International transportation manager
+          ul.jobs__conditions.working-conditions
+            li.working-conditions__item Up to €50,000 per year
+            li.working-conditions__item Full time
+          span.jobs__btn.btn.btn--primary
+            span.btn__inner   LEARN MORE
+
 

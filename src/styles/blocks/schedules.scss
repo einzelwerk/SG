@@ -26,7 +26,7 @@
 }
 
 .schedules-list {
-  &__item {
+  &__link {
     @include media(md) {
       margin-bottom: 16px;
     }
@@ -45,6 +45,11 @@
 
     &:hover {
       background: #2a303c;
+
+      .schedules-list__btn {
+        color: var(--headline);
+        background: var(--main-white);
+      }
     }
 
     &:last-child {
