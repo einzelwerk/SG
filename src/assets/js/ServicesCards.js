@@ -1,24 +1,26 @@
 import { gsap, ScrollTrigger } from 'gsap/all';
 import breakpoints from './MatchMedia';
 
-const mm = gsap.matchMedia();
+window.addEventListener('load', () => {
+  const mm = gsap.matchMedia();
 
-gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(ScrollTrigger);
 
-const target = gsap.utils.toArray('.services__item');
-target.pop();
+  const target = gsap.utils.toArray('.services__item');
+  target.pop();
 
-mm.add(breakpoints.isDesktop, () => {
-  gsap.to(target, {
-    yPercent: -100,
-    stagger: 1,
+  mm.add(breakpoints.isDesktop, () => {
+    gsap.to(target, {
+      yPercent: -100,
+      stagger: 1,
 
-    scrollTrigger: {
-      trigger: '.services',
-      pin: true,
-      scrub: true,
-      markers: true,
-      start: 'bottom bottom',
-    },
+      scrollTrigger: {
+        trigger: '.services',
+        pin: true,
+        scrub: true,
+        markers: true,
+        start: 'bottom bottom',
+      },
+    });
   });
 });
