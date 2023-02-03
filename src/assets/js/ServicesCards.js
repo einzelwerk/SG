@@ -18,7 +18,7 @@ window.addEventListener('load', () => {
         trigger: '.services',
         pin: true,
         scrub: true,
-        markers: true,
+
         start: 'bottom bottom',
       },
     });
