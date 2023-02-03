@@ -14,6 +14,7 @@ mm.add(breakpoints.isDesktop, () => {
       trigger: '.services',
       pin: true,
       scrub: true,
+      markers: true,
       start: 'bottom bottom',
     },
   });
