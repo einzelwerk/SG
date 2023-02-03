@@ -5,8 +5,11 @@ const mm = gsap.matchMedia();
 
 gsap.registerPlugin(ScrollTrigger);
 
+const target = gsap.utils.toArray('.services__item');
+target.pop();
+
 mm.add(breakpoints.isDesktop, () => {
-  gsap.to('.services__item:not(:last-child)', {
+  gsap.to(target, {
     yPercent: -100,
     stagger: 1,
 
