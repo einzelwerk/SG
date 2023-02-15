@@ -1,28 +1,29 @@
-header.header.container
-  .header__logo.logo 
-    a.logo__link(href="") 
-      img.logo__src(src=require('@/images/logo.svg'), alt="")
-  nav.header__nav.nav.hidden-mobile
-    ul.nav-list 
-      each val in menu 
-        li.nav__item(class=val.hasSub ? 'nav__item--has-children' : '')
-          a.nav__link(href=val.link)=val.name
-          if val.hasSub 
-            ul.nav__sub.sub-menu
-              each val2 in val.hasSub
-                li.sub-menu__item 
-                  a.sub-menu__link(href=val2.link)= val2.name
-  button.header__btn.btn.btn--filled.hidden-mobile(data-modal="main-modal" type="button")
-    span.btn__inner FREIGHT INQUIRE
-  .m-button-group.hidden-desktop
-    button.m-button-group__btn.btn.btn--filled(data-modal="main-modal" type="button" aria-label="Open modal")
-      span.btn__inner
-        svg(width="24" height="24")
-          use(xlink:href="sprite.svg#ship_sprite") 
-    button.m-button-group__btn.btn.btn--primary.open-menu-btn(aria-label="Menü schließen" aria-expanded="false")
-      span.btn__inner
-        svg(width="24" height="24")
-          use(xlink:href="sprite.svg#menu_sprite") 
+header.header
+  .header__inner.container 
+    .header__logo.logo 
+      a.logo__link(href="") 
+        img.logo__src(src=require('@/images/logo.svg'), alt="")
+    nav.header__nav.nav.hidden-mobile
+      ul.nav-list 
+        each val in menu 
+          li.nav__item(class=val.hasSub ? 'nav__item--has-children' : '')
+            a.nav__link(href=val.link)=val.name
+            if val.hasSub 
+              ul.nav__sub.sub-menu
+                each val2 in val.hasSub
+                  li.sub-menu__item 
+                    a.sub-menu__link(href=val2.link)= val2.name
+    button.header__btn.btn.btn--filled.hidden-mobile(data-modal="main-modal" type="button")
+      span.btn__inner FREIGHT INQUIRE
+    .m-button-group.hidden-desktop
+      button.m-button-group__btn.btn.btn--filled(data-modal="main-modal" type="button" aria-label="Open modal")
+        span.btn__inner
+          svg(width="24" height="24")
+            use(xlink:href="sprite.svg#ship_sprite") 
+      button.m-button-group__btn.btn.btn--primary.open-menu-btn(aria-label="Menü schließen" aria-expanded="false")
+        span.btn__inner
+          svg(width="24" height="24")
+            use(xlink:href="sprite.svg#menu_sprite") 
 nav.mobile-nav.hidden-desktop#nav
   .mobile-nav__header
     .logo

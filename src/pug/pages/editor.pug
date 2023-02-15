@@ -1,0 +1,22 @@
+extends ../layouts/main--no-hero
+
+block content
+  - locals.breadcrumbs = ['Home' , 'Contact' ]
+  include ../blocks/breadcrumbs
+  section.section.section--breadcrumbs.container 
+    h1.page-title Editor content
+  section.section.section--no-top.container
+    .editor-content 
+      h1 h1 TEXT 
+      h2 h2 TEXT 
+      h3 h3 TEXT 
+      h4 h4 TEXT 
+      h5 H5 TEXT 
+      h6 h6 TEXT
+      p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est, dicta voluptatum vitae aliquam, ducimus neque repellat quia eos odio illo eius accusamus at placeat id officiis tempore fuga libero rerum?
+      p Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore veniam expedita cum minima minus cumque maxime in vero deserunt repellendus, nobis voluptates nostrum ad repudiandae, natus illum nisi exercitationem voluptatum!
+      ul 
+        li list 1
+        li list 2
+        li list 3
+      img(src=require('@/images/about.jpg'), alt="")

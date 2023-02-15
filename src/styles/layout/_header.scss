@@ -2,6 +2,7 @@
 @use '../utils/mixins' as *;
 
 .header {
+  $this: &;
   @include media(md) {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -9,20 +10,36 @@
 
   position: absolute;
   z-index: 1010;
+  z-index: 1010;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  padding-top: 30px;
-  padding-bottom: 30px;
+  width: 100%;
 
   color: var(--main-color);
 
   transition: background 0.5s;
+
+  &.fixed {
+    position: fixed;
+    background: rgb(29 29 27 / 84%);
+    backdrop-filter: blur(8px);
+
+    #{$this}__inner {
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
 
   &--menu-is-open {
     background: var(--main-white);
