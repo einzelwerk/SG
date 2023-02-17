@@ -50,7 +50,7 @@ class Modal {
 
   listener() {
     document.addEventListener('click', (e) => {
-      if ((this.state && !e.target.closest('.modal__inner')) || (this.state && e.target.closest(this.closeBtn))) {
+      if ((this.state && !e.target.closest('.modal__inner')) || (this.state && e.target.closest(this.closeBtn)) || e.key === 'Escape') {
         this.close();
       }
       if (!this.state && e.target.closest(this.trigger)) {

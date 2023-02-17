@@ -91,8 +91,10 @@ class HeroVideoPlayback {
     );
     if (reverse) {
       tl.reverse(true);
+      this.video.setAttribute('muted', '');
     } else {
       tl.play();
+      this.video.removeAttribute('muted', '');
     }
   }
 

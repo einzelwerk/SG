@@ -9,7 +9,7 @@
   font-weight: 500;
   text-transform: uppercase;
 
-  border: 1px solid var(--white);
+  border: 1px solid currentcolor;
   border-radius: 100px;
 
   transition: 0.5s;
@@ -18,11 +18,13 @@
     &:hover {
       color: var(--headline);
       background: var(--main-white);
+      border-color: transparent;
     }
   }
 
   &--blue {
     color: var(--accent-blue);
+    border-color: currentcolor;
 
     &:hover {
       color: var(--main-white);

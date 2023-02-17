@@ -14,7 +14,7 @@
 
   h3 {
     margin-bottom: 1rem;
-    font-size: 3.5rem;
+    font-size: 2.7rem;
   }
 
   h4 {
@@ -54,5 +54,10 @@
       position: absolute;
       left: 0;
     }
+  }
+
+  a {
+    display: block;
+    text-decoration: underline;
   }
 }

@@ -3,10 +3,6 @@
 
 .header {
   $this: &;
-  @include media(md) {
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
 
   position: absolute;
   z-index: 1010;
@@ -33,6 +29,11 @@
   }
 
   &__inner {
+    @include media(md) {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
     display: flex;
     align-items: center;
     justify-content: space-between;
