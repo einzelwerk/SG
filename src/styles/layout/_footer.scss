@@ -69,6 +69,9 @@
 }
 
 .footer-middle {
+  @include media(lg) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
   @include media(md) {
     grid-template-columns: 1fr;
     gap: 40px;
@@ -76,7 +79,7 @@
   }
 
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr auto;
   gap: 30px;
   justify-content: space-between;
 
