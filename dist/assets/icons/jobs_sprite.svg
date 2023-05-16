@@ -1,7 +1,7 @@
 export default {
       id: "jobs_sprite-usage",
       viewBox: "0 0 100 96",
-      url: __webpack_public_path__ + "C:\\Users\\user\\Desktop\\work\\sg\\src\\assets\\icons\\jobs_sprite.svg",
+      url: __webpack_public_path__ + "C:\\projects\\SG\\src\\assets\\icons\\jobs_sprite.svg",
       toString: function () {
         return this.url;
       }
