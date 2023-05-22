@@ -9,3 +9,30 @@
     margin-top: 108px;
   }
 }
+
+.job-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 48px;
+
+  &__btn {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+
+    padding: 6px 12px;
+
+    line-height: 150%;
+
+    border-radius: 12px;
+
+    &[aria-selected='true'] {
+      @include media(md) {
+        color: var(--black-100);
+      }
+
+      background: var(--white);
+      border: 1px solid #b9bfc9;
+    }
+  }
+}

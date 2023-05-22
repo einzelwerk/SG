@@ -11,10 +11,46 @@ block content
         .job-conditional__item Up to €50,000 per year
         .job-conditional__item Full time
   section.job-description
-    .job-description__inner.container 
+    .container.job-tabs(role='tablist')
+      button.job-tabs__btn(type='button' role='tab' aria-selected='true' aria-controls='job-tabs-1')
+        img(src=require('@/images/flagEn.svg'), alt="")
+        |  English
+      button.job-tabs__btn(type='button' role='tab' aria-selected='false' aria-controls='job-tabs-2')
+        img(src=require('@/images/flagDe.svg'), alt="")
+        | Deutsch
+    #job-tabs-1.job-description__inner.container(role='tablist') 
       .job-description__col 
         .job-description__item
           h2.job-description__title Your Profile
+          ul
+            li Abgeschlossenes Studium der Architektur
+            li mind. 2 Jahre Berufserfahrung sind wünschenswert
+            li selbständige Arbeitsweise
+            li Teamfähigkeit und proaktive Kommunikation
+            li Führerschein für PKW 
+        .job-description__item
+          h2.job-description__title Your Tasks
+          ul
+            li Entwurfsplanung
+            li Bauantragsplanung
+            li Ausführungsplanung
+            li Abstimmung und Koordination mit externen Fachplanern
+            li Enge Zusammenarbeit mit Projektleitern und unserer Planungsabteilung
+            li eigenständige zeichnerische Umsetzung von Planungskonzepten und Detaillösungen
+            li eine ganzheitliche Bearbeitung von Projekten, inkl. Bauleitung ist möglich
+      .job-description__col.job-description__col--desc
+        .job-description__item
+          h2.job-description__title Bremerhaven
+          p Do you enjoy working with and learning from people from different cultures and with different experiences? Stena Glovis may be the place for you. We offer a wide range of career opportunities.
+          p Remember the first time you solved a problem by programming? The delight and excitement you felt when it finally...worked? We want to deliver that experience to everyone by giving them the building blocks to create useful tools of all kinds—without needing to code. That's been the vision of computing pioneers since the 70s. Today, all the infrastructure is present, but we need your engineering to pull it off.
+          ul
+            li You'll work with others to build new product features from start to finish: through conception, research, implementation, and maintenance. For example, you might build an editor for inline mathematical equations.
+            li You'll leverage your frontend knowledge to help improve performance and reliability, and polish existing features. For example, you might make it easier to select text across multiple paragraphs.
+            li You'll work across the stack to implement features end-to-end. For example, you might build a new sidebar for displaying page comments, and over the course of implementing it you may modify an existing Node.js endpoint to fetch comment data upon page load.
+    #job-tabs-2.job-description__inner.container(role='tablist') 
+      .job-description__col 
+        .job-description__item
+          h2.job-description__title Your Profile (Deutsch)
           ul
             li Abgeschlossenes Studium der Architektur
             li mind. 2 Jahre Berufserfahrung sind wünschenswert

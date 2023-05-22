@@ -130,4 +130,8 @@ window.addEventListener('load', () => {
   for (let i = 0; i < mapTabs2.length; i += 1) {
     new TabsAutomatic(mapTabs2[i]);
   }
+  const jobsTabs = document.querySelectorAll('[role=tablist].job-tabs');
+  for (let i = 0; i < jobsTabs.length; i += 1) {
+    new TabsAutomatic(jobsTabs[i]);
+  }
 });
