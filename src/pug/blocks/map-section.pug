@@ -26,10 +26,12 @@ section.section.container
     else
       #maps-tabs-1.maps-category-wrapper(role='tablist')
         - var arr = [1,2,3,4,5,6]
-        .maps-category
-          each val, index in arr
-            button.maps-category__btn.btn.btn--primary(type='button' role='tab' aria-selected=`${index === 0 ? 'true' : 'false'}` aria-controls=`map-${index}`) 
-              span.btn__inner EU - Far East
+        .maps-category.swiper 
+          .swiper-wrapper
+            each val, index in arr
+              .swiper-slide
+                button.maps-category__btn.btn.btn--primary(type='button' role='tab' aria-selected=`${index === 0 ? 'true' : 'false'}` aria-controls=`map-${index}`) 
+                  span.btn__inner EU - Far East
         each val, index in arr
           .map-container(id=`map-${index}` role='tablist')
             .map

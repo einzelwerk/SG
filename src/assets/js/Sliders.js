@@ -77,6 +77,19 @@ class Sliders {
 
     sliderInstance.init();
   }
+
+  static mapsCategorySlider() {
+    const root = document.querySelector('.maps-category');
+    const sliderInstance = new Swiper(root, {
+      init: false,
+
+      slidesPerView: 11,
+      spaceBetween: 12,
+
+    });
+
+    sliderInstance.init();
+  }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -85,4 +98,5 @@ document.addEventListener('DOMContentLoaded', () => {
   Sliders.featuresSlider();
   Sliders.departmentsSlider();
   Sliders.careerFeaturesSlider();
+  Sliders.mapsCategorySlider();
 });
