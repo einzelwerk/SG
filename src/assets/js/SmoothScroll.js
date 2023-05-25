@@ -7,10 +7,13 @@ const smoother = ScrollSmoother.create({
   effects: true,
 });
 
-const scrollTarget = document.querySelector('.js-scroll-to-section');
 
-if (scrollTarget) {
-  scrollTarget.addEventListener('click', () => {
-    smoother.scrollTo(document.querySelector('.section-hero').offsetHeight, true, 'top top');
-  });
-}
+
+const archonLinks = document.querySelectorAll('a[href^="#"]')
+archonLinks.forEach(t => {
+  t.addEventListener('click', e => {
+    e.preventDefault();
+    const target = e.currentTarget.getAttribute('href')
+    smoother.scrollTo(target)
+  })
+})
