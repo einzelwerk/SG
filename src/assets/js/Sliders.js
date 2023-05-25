@@ -83,8 +83,9 @@ class Sliders {
     const sliderInstance = new Swiper(root, {
       init: false,
 
-      slidesPerView: 11,
+      slidesPerView: 'auto',
       spaceBetween: 12,
+      breakpoints: {}
 
     });
 

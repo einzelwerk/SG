@@ -47,6 +47,10 @@
 
   display: flex;
 
+  .swiper-slide {
+    width: auto;
+  }
+
   &__btn {
     margin-right: 12px;
     white-space: nowrap;
