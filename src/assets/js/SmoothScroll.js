@@ -9,7 +9,7 @@ const smoother = ScrollSmoother.create({
 
 
 
-const archonLinks = document.querySelectorAll('a[href^="#"]')
+const archonLinks = document.querySelectorAll('js-scroll-to-section')
 archonLinks.forEach(t => {
   t.addEventListener('click', e => {
     e.preventDefault();
