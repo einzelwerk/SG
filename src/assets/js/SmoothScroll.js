@@ -48,12 +48,17 @@ gsap.registerPlugin(ScrollTrigger);
 
 counterElements.forEach((element) => {
   const finalNumber = parseFloat(element.innerText);
-  gsap.set(element, { innerHTML: 0 });
 
-  ScrollTrigger.create({
-    trigger: element.parentNode,
-    onEnter: () => {
-      animateNumber(element, finalNumber);
-    }
-  });
+  // Проверяем, является ли finalNumber числом
+  if (!isNaN(finalNumber) && typeof finalNumber === 'number') {
+    gsap.set(element, { innerHTML: 0 });
+
+    ScrollTrigger.create({
+      trigger: element.parentNode,
+      onEnter: () => {
+        animateNumber(element, finalNumber);
+      }
+    });
+  }
 });
+
