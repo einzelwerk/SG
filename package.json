@@ -50,6 +50,7 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
+    "@fancyapps/ui": "^5.0.19",
     "gsap": "npm:@gsap/shockingly@^3.11.3",
     "node-sass": "^8.0.0",
     "swiper": "^8.4.4"

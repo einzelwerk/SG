@@ -11,3 +11,4 @@ import './AttachedFiles';
 import './Modal';
 import './SubMenu';
 import './Scrolling';
+import './Fancybox'

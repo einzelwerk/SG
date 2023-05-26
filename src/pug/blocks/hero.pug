@@ -15,5 +15,5 @@ section.section-hero
           a.hero__btn.btn.btn--blue(href="#" download)
             span.btn__inner DOWNLOAD PRESENTATION
         if !imageSrc
-          button.hero__btn.btn.btn--primary.js-play-hero-video(type="button" data-switch-text="BACK TO SITE")
+          a.hero__btn.btn.btn--primary(type="button" href=require('@/video/home-hero.mp4') data-fancybox data-switch-text="BACK TO SITE")
             span.btn__inner WATCH FULL VIDEO
