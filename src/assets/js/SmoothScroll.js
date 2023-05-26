@@ -15,7 +15,7 @@ archonLinks.forEach(t => {
   t.addEventListener('click', e => {
     e.preventDefault();
     const target = e.currentTarget.getAttribute('href')
-    smoother.scrollTo(target)
+    smoother.scrollTo(target, true)
   })
 })
 
