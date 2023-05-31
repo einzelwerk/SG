@@ -40,11 +40,3 @@ jobs:
           message: |
             Author: ${{ github.actor }}
             Update site: ${{ secrets.SITE_URL }}
-      - name: send Galya telegram message
-        uses: appleboy/telegram-action@master
-        with:
-          to: ${{ secrets.TELEGRAM_TO_GALYA }}
-          token: ${{ secrets.TELEGRAM_TOKEN }}
-          message: |
-            Author: ${{ github.actor }}
-            Update site: ${{ secrets.SITE_URL }}
