@@ -37,14 +37,18 @@ class TabsAutomatic {
       if (currentTab === tab) {
         tab.setAttribute('aria-selected', 'true');
         tab.removeAttribute('tabindex');
+
         this.tabpanels[this.tabs.indexOf(tab)].classList.remove('is-hidden');
+        this.tabpanels[this.tabs.indexOf(tab)].classList.add('animate');
         if (setFocus) {
           tab.focus();
         }
       } else {
         tab.setAttribute('aria-selected', 'false');
         tab.tabIndex = -1;
+
         this.tabpanels[this.tabs.indexOf(tab)].classList.add('is-hidden');
+        this.tabpanels[this.tabs.indexOf(tab)].classList.remove('animate');
       }
     });
   }
