@@ -3,13 +3,17 @@
 .departments {
   &__grid {
     @include media(md, min-width) {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      display: flex;
+      flex-wrap: wrap;
       gap: var(--gap);
     }
   }
 
   &__item {
+    @include media(md, min-width) {
+      width: calc(33.3% - var(--gap));
+    }
+
     position: relative;
 
     overflow: hidden;
