@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+  <script defer src="assets/main.js"></script><link href="assets/css/main.css" rel="stylesheet"></head>
+  <body>
+<header class="header">
+  <div class="header__inner container"> 
+    <div class="header__logo logo"> <a class="logo__link" href=""> <img class="logo__src" src="assets/images/logo.svg" alt=""></a></div>
+    <nav class="header__nav nav hidden-mobile">
+      <ul class="nav-list"> 
+        <li class="nav__item nav__item--has-children"><a class="nav__link" href="">Business Areas</a>
+          <ul class="nav__sub sub-menu">
+            <li class="sub-menu__item"> <a class="sub-menu__link" href="./deep-sea.html">Deep Sea Servces</a></li>
+            <li class="sub-menu__item"> <a class="sub-menu__link" href="/SG/ferry-services.html">Ferry Services</a></li>
+            <li class="sub-menu__item"> <a class="sub-menu__link" href="/SG/cargo.html">Cargo Types</a></li>
+          </ul>
+        </li>
+        <li class="nav__item"><a class="nav__link" href="/SG/trade-areas.html">Trade Areas</a>
+        </li>
+        <li class="nav__item nav__item--has-children"><a class="nav__link" href="">Customer service</a>
+          <ul class="nav__sub sub-menu">
+            <li class="sub-menu__item"> <a class="sub-menu__link" href="/SG/delivery.html">Delivery</a></li>
+            <li class="sub-menu__item"> <a class="sub-menu__link" href="/SG/schedules.html">Schedules</a></li>
+          </ul>
+        </li>
+        <li class="nav__item"><a class="nav__link" href="/SG/career.html">Career</a>
+        </li>
+        <li class="nav__item"><a class="nav__link" href="/SG/job-page.html">Job page</a>
+        </li>
+        <li class="nav__item nav__item--has-children"><a class="nav__link" href="/SG/about.html">About us</a>
+          <ul class="nav__sub sub-menu">
+            <li class="sub-menu__item"> <a class="sub-menu__link" href="/SG/group-fleet.html">Group fleet</a></li>
+          </ul>
+        </li>
+        <li class="nav__item"><a class="nav__link" href="/SG/contacts.html">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <button class="header__btn btn btn--filled hidden-mobile" data-modal="main-modal" type="button"><span class="btn__inner">FREIGHT INQUIRE</span></button>
+    <div class="m-button-group hidden-desktop">
+      <button class="m-button-group__btn btn btn--filled" data-modal="main-modal" type="button" aria-label="Open modal"><span class="btn__inner">
+          <svg width="24" height="24">
+            <use xlink:href="sprite.svg#ship_sprite"> </use>
+          </svg></span></button>
+      <button class="m-button-group__btn btn btn--primary open-menu-btn" aria-label="Menü schließen" aria-expanded="false"><span class="btn__inner">
+          <svg width="24" height="24">
+            <use xlink:href="sprite.svg#menu_sprite"> </use>
+          </svg></span></button>
+    </div>
+  </div>
+</header>
+<nav class="mobile-nav hidden-desktop" id="nav">
+  <div class="mobile-nav__header">
+    <div class="logo"><a class="logo__link" href=""><img class="logo__src" src="assets/images/logo-black.svg"></a></div>
+    <div class="m-button-group hidden-desktop">
+      <button class="m-button-group__btn btn btn--filled" data-modal="main-modal" type="button" aria-label="Open modal"><span class="btn__inner">
+          <svg width="24" height="24">
+            <use xlink:href="sprite.svg#ship_sprite"> </use>
+          </svg></span></button>
+      <button class="m-button-group__btn btn btn--primary open-menu-btn" aria-label="Menü öffnen" aria-expanded="false"><span class="btn__inner">
+          <svg width="24" height="24">
+            <use xlink:href="sprite.svg#close_sprite"> </use>
+          </svg></span></button>
+    </div>
+  </div>
+  <ul class="mobile-nav__list">
+    <li class="mobile-nav__item mobile-nav__item--has-children"><span class="mobile-nav__item-wrap"><a class="mobile-nav__link" href="">Business Areas</a><span class="mobile-nav__arrow">
+          <svg width="12" height="12">
+            <use xlink:href="sprite.svg#arrow_sprite"> </use>
+          </svg></span></span>
+      <ul class="mobile-nav__sub mobile-sub-menu">
+        <li class="mobile-sub-menu__item"> <a class="mobile-sub-menu__link" href="./deep-sea.html">Deep Sea Servces</a></li>
+        <li class="mobile-sub-menu__item"> <a class="mobile-sub-menu__link" href="/SG/ferry-services.html">Ferry Services</a></li>
+        <li class="mobile-sub-menu__item"> <a class="mobile-sub-menu__link" href="/SG/cargo.html">Cargo Types</a></li>
+      </ul>
+    </li>
+    <li class="mobile-nav__item"><span class="mobile-nav__item-wrap"><a class="mobile-nav__link" href="/SG/trade-areas.html">Trade Areas</a></span>
+    </li>
+    <li class="mobile-nav__item mobile-nav__item--has-children"><span class="mobile-nav__item-wrap"><a class="mobile-nav__link" href="">Customer service</a><span class="mobile-nav__arrow">
+          <svg width="12" height="12">
+            <use xlink:href="sprite.svg#arrow_sprite"> </use>
+          </svg></span></span>
+      <ul class="mobile-nav__sub mobile-sub-menu">
+        <li class="mobile-sub-menu__item"> <a class="mobile-sub-menu__link" href="/SG/delivery.html">Delivery</a></li>
+        <li class="mobile-sub-menu__item"> <a class="mobile-sub-menu__link" href="/SG/schedules.html">Schedules</a></li>
+      </ul>
+    </li>
+    <li class="mobile-nav__item"><span class="mobile-nav__item-wrap"><a class="mobile-nav__link" href="/SG/career.html">Career</a></span>
+    </li>
+    <li class="mobile-nav__item"><span class="mobile-nav__item-wrap"><a class="mobile-nav__link" href="/SG/job-page.html">Job page</a></span>
+    </li>
+    <li class="mobile-nav__item mobile-nav__item--has-children"><span class="mobile-nav__item-wrap"><a class="mobile-nav__link" href="/SG/about.html">About us</a><span class="mobile-nav__arrow">
+          <svg width="12" height="12">
+            <use xlink:href="sprite.svg#arrow_sprite"> </use>
+          </svg></span></span>
+      <ul class="mobile-nav__sub mobile-sub-menu">
+        <li class="mobile-sub-menu__item"> <a class="mobile-sub-menu__link" href="/SG/group-fleet.html">Group fleet</a></li>
+      </ul>
+    </li>
+    <li class="mobile-nav__item"><span class="mobile-nav__item-wrap"><a class="mobile-nav__link" href="/SG/contacts.html">Contact</a></span>
+    </li>
+  </ul><a class="mobile-nav__btn btn btn--primary" href=""><span class="btn__inner"> Download Presentation</span></a><span class="mobile-nav__copyright"> © Stena Glovis. 2022</span>
+</nav>
+    <div id="smooth-wrapper"> 
+      <div id="smooth-content">
+        <main class="main main--offset-top">
+          <div class="container">
+            <div class="service-page"> 
+              <picture class="service-page__image"><img src="assets/images/thanks.svg" alt=""></picture>
+              <div class="service-page__text">
+                <h1 class="service-page__title">Thanks for reaching us!</h1>
+                <div class="service-page__desc">
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                </div>
+              </div><a class="service-page__link btn btn--filled" href=""><span class="btn__inner">back to home</span></a>
+            </div>
+          </div>
+        </main>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer__logo logo logo--big"><a class="logo__link" href=""> <img class="logo__src" src="assets/images/logo-black.svg" alt=""></a></div><a class="footer__download btn btn--black" href="" download><span class="btn__inner"> Download Presentation</span></a>
+    </div>
+    <div class="footer-middle">
+      <div class="footer__col"> 
+        <h6 class="footer__title">Services</h6>
+        <nav class="footer-nav">
+          <ul class="footer-nav-list">
+            <li class="footer-nav__item"> <a class="footer-nav__link" href="">Deep Sea Services</a></li>
+            <li class="footer-nav__item"> <a class="footer-nav__link" href="">Ferry Services</a></li>
+            <li class="footer-nav__item"> <a class="footer-nav__link" href="">Cargo Types</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer__col"> 
+        <h6 class="footer__title">For Customers</h6>
+        <nav class="footer-nav">
+          <ul class="footer-nav-list">
+            <li class="footer-nav__item"> <a class="footer-nav__link" href="">Freight Inquiries</a></li>
+            <li class="footer-nav__item"> <a class="footer-nav__link" href="">Schedules</a></li>
+            <li class="footer-nav__item"> <a class="footer-nav__link" href="">Group Fleet</a></li>
+            <li class="footer-nav__item"> <a class="footer-nav__link" href="">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer__col"> 
+        <h6 class="footer__title">Company</h6>
+        <nav class="footer-nav">
+          <ul class="footer-nav-list">
+            <li class="footer-nav__item"> <a class="footer-nav__link" href="">About</a></li>
+            <li class="footer-nav__item"> <a class="footer-nav__link" href="">Career</a></li>
+            <li class="footer-nav__item"> <a class="footer-nav__link" href="">Contacts</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer__col"> 
+        <h6 class="footer__title">Contacts</h6>
+        <div class="footer-contacts"> 
+          <address class="footer-contacts__item">Dammtorwall 7a20354 Hamburg, Germany</address>
+        </div>
+        <div class="footer-contacts__item"> <a class="footer-contacts__link" href="tel:+49 40 359 833 720">+49 40 359 833 720</a></div>
+        <div class="footer-contacts__item"> <a class="footer-contacts__link footer-contacts__link--underline" href="mailto:hamburg@stenaglovis.com">hamburg@stenaglovis.com</a></div>
+        <div class="footer-contacts__item"> <a class="footer-contacts__link footer-contacts__link--underline" href="mailto:bremen@stenaglovis.com">bremen@stenaglovis.com</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer__copyright">© Stena Glovis. 2022</div>
+      <div class="footer-bottom__link-group"> <a class="footer__data-link" href="">Datenschutz </a><a class="footer__data-link" href="">Terms & Conditions</a></div>
+    </div>
+  </div>
+</footer>
+      </div>
+    </div>
+<div class="modal" data-modal-el="main-modal">
+  <div class="modal__inner">
+    <div class="modal__close"> 
+      <svg width="24" height="24">
+        <use xlink:href="sprite.svg#close_sprite"> </use>
+      </svg>
+    </div>
+    <h4 class="modal__title">Get a quote</h4>
+    <div class="modal__desc">Do you enjoy working with and learning from people from? You could <a href="mailto:email@gmail.com">send an email to us </a>and with different experiences?</div>
+    <div class="modal__form"> 
+      <form class="main-form" action="">
+        <div class="main-form__item">
+          <label class="main-form__label" for="modal-name">
+            <input class="main-form__input" id="modal-name" type="text" placeholder="Full name">
+          </label>
+        </div>
+        <div class="main-form__item">
+          <label class="main-form__label" for="modal-email">
+            <input class="main-form__input" id="modal-email" type="text" placeholder="E-Mail">
+          </label>
+        </div>
+        <div class="main-form__item">
+          <label class="main-form__label" for="modal-phone">
+            <input class="main-form__input" id="modal-phone" type="text" placeholder="Phone*">
+          </label>
+        </div>
+        <div class="main-form__item">
+          <label class="main-form__label" for="modal-career">
+            <textarea class="main-form__input" id="modal-message" placeholder="Message*"></textarea>
+          </label>
+        </div>
+        <div class="main-form__item main-form__item--clip-file">
+          <label class="main-form__label" for="modal-file">
+            <input class="main-form__file js-attached-files" id="modal-file" type="file" multiple><span class="main-form__file-placeholder">
+              <div class="main-form__file-placeholder-text"> Upload CV</div>
+              <svg class="main-form__clip-icon" width="24" height="24">
+                <use xlink:href="sprite.svg#clip_sprite"></use>
+              </svg></span>
+          </label><span class="attached-files-area"><span class="attached-files"></span></span>
+        </div>
+        <div class="main-form__checkbox checkbox">
+          <label class="main-form__checkbox-label">
+            <input class="checkbox__input" type="checkbox">
+            <div class="checkbox__fake"></div><span>I'm agree with </span>
+          </label><a class="checkbox__link" href="">privacy policy </a>
+        </div>
+        <button class="main-form__submit btn btn--primary btn--filled"><span class="btn__inner">Apply</span></button>
+      </form>
+    </div>
+  </div>
+</div>
+  </body>
+</html>
